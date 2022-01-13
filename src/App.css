@@ -1,9 +1,19 @@
+h1{
+  font-family: 'Rock Salt', cursive;
+  text-shadow: 3px 5px 10px rgba(0,0,0,0.5);
+}
+p{
+  color:#050519;
+  width: 90%;
+  margin: 0 auto;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 140px;
   pointer-events: none;
 }
 
@@ -14,7 +24,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #80D8FF;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,7 +35,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #FF6400;
 }
 
 @keyframes App-logo-spin {
