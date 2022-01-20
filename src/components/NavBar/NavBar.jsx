@@ -3,12 +3,13 @@ import './NavBar.css';
 //import Logo from '../../img/logo-thunder.png';
 
 
-export const NavBar = () => {
+export const NavBar = (props) => {
+    console.log(props)
     return (
         <nav>
             <h1>LOGO</h1>           
 
-            <ul>
+            <ul style={{border:`4px solid ${props.color}`}}>
                 <li><a href="">Vestimenta</a></li>
                 <li><a href="">Calzado</a>
                     <ul>

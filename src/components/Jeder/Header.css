@@ -1,0 +1,14 @@
+.jeder{
+    top:0;
+    background: linear-gradient(#454545, #1a1a1a);
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.logo{
+    margin:0
+}
+.logo img{
+    height: 80px;
+}

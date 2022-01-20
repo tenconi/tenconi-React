@@ -1,5 +1,8 @@
 import './App.css';
-import { NavBar } from './components/NavBar/NavBar.jsx';
+
+
+//componentes
+import Header from './components/Jeder/Header';
 
 /*
 const name = 'Daniel Tenconi';
@@ -12,13 +15,23 @@ const style ={
   },
 }
 */
+const orangeColor = "orangered";
+const blueColor = "blue";
+const greenColor = "green";
 
 function App() {
   return (    
     <div className="App">
-      <NavBar/>
 
-      
+<Header/>
+
+    
+      {/*
+      <NavBar color={orangeColor}/>    // esto e suna Prop  
+      <NavBar color={blueColor}/>    // esto e suna Prop
+      <NavBar color={greenColor}/>    // esto e suna Prop
+      */}
+
       
       {/* //Ejemplo de estilos
       <header className="App-header">        
@@ -36,6 +49,9 @@ function App() {
           Learn React
         </a>
     </header>*/}
+
+
+
     </div>
   );
   
