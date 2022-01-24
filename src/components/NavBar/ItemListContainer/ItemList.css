@@ -1,0 +1,35 @@
+.itemList{
+    background:#000000;
+    display: flex;
+    justify-content: flex-end;
+    padding:2px 50px
+}
+.itemList p{
+    color:#ffffff;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    margin: 0;
+}
+.itemList p > span{
+    background:red;
+    font-size: 14px;
+    font-weight: 600;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+p.basketCart{
+    display: inline-flex;
+    flex-direction: row;
+    margin-left:25px;
+}
+p.basketCart i{
+    margin-right: 5px;
+    font-size: 16px;
+}

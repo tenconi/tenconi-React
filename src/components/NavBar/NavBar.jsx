@@ -1,32 +1,23 @@
 import React from 'react';
-import './NavBar.css';
-//import Logo from '../../img/logo-thunder.png';
+import './NavBar.css'
+import Logo from '../../img/logo-thunder-w.png'
 
+const NavBar = () => {
+  return <div className='nav'>
+      <div className='container'>
+        <h1><img src={Logo} alt="thunder sport" className='logo'/></h1>
 
-export const NavBar = (props) => {
-    console.log(props)
-    return (
-        <nav>
-            <h1>LOGO</h1>           
+        <ul>
+            <li><a href="">Niños</a></li>
+            <li><a href="">Mujeres</a></li>
+            <li><a href="">Hombres</a></li>
+            <li><a href="">Deportes</a></li>
+            <li><a href="">Marcas</a></li>
+            <li><a href="">Oulets</a></li>
+        </ul>
+      </div>
 
-            <ul style={{border:`4px solid ${props.color}`}}>
-                <li><a href="">Vestimenta</a></li>
-                <li><a href="">Calzado</a>
-                    <ul>
-                        <li><a href="">Crossfit</a></li>
-                        <li><a href="">Running</a></li>
-                        <li><a href="">Trekking</a></li>
-                    </ul>
-                </li>
-                <li><a href="">Insumos</a></li>
-                <li><a href="">x-treme</a></li>
-            </ul>
+  </div>;
+};
 
-            <ul className="acces">
-                <li><a href="">login</a></li>
-                <li><a href="">cart</a></li>
-            </ul>
-            
-        </nav>
-    )
-}
+export default NavBar;
