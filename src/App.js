@@ -3,6 +3,7 @@ import Cards from './components/Cards/Cards';
 //componentes
 import { ItemList } from './components/NavBar/ItemListContainer/ItemList';
 import NavBar from './components/NavBar/NavBar.jsx';
+import Item from './components/Item/Item';
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
     <ItemList name="Daniel Tenconi"/>{/* paso prop para levantarla desde ItemList*/}
     <NavBar/>
     
-    
+    <Item/>
     <div className='portaCard'>
       
       <Cards stock={3} initial="0" onAdd={onAdd} name="Zapas Adidas" cardImg="https://contents.mediadecathlon.com/p1959434/k$670da77ff8a3240facacc0392bd93684/sq/8659260.jpg?format=auto&f=800x0"/>
