@@ -3,11 +3,11 @@ import zapa1 from '../../img/zapas-1.jpg'
 import ItemCount from './ItemCount';
 
 const Cards = (props) => {    
-  
+  //vuelvo a pasar las props al "contador"
 
   return <div className='card'>
     <div className='card__porta-img'>
-      <img src={props.cardImg} alt="" />     
+      <img src={props.cardImg} alt="calzado" />     
 
     </div>
 

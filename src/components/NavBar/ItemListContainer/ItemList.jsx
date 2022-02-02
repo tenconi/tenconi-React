@@ -6,7 +6,7 @@ export const ItemList = (props) => {
   return <div>
       <div className="itemList">
           
-        <p>hola {props.name}</p>{/* traigo el nombre desde la props en el tag principal*/}
+        <p><i className="icon-user"></i> {props.name}</p>{/* traigo el nombre desde la props en el tag principal*/}
 
         <CartWidget/>
       </div>

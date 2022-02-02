@@ -12,8 +12,12 @@
     width: auto;
     margin: 0;
 }
+.icon-user{
+    font-size: 16px;
+    margin-right: 5px;
+}
 .itemList p > span{
-    background:red;
+    background:rgb(241, 6, 6);
     font-size: 14px;
     font-weight: 600;
     width: 20px;

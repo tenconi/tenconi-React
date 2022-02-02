@@ -1,6 +1,7 @@
 import {Children, useEffect, useState} from 'react';
 
 const ItemCount = (props) => {
+//Levanto las props que pase desde >> App.js >> Cards.jsx >> y lo levanto en este componente "ItemCount.jsx"
 
   const [initial, setInitial] = useState(0);
   //console.log(props) 

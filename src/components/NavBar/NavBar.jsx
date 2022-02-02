@@ -1,6 +1,6 @@
 import React from 'react';
 import './NavBar.css'
-import Logo from '../../img/logo-thunder-w.png'
+import Logo from '../../img/thunder.svg'
 
 const NavBar = () => {
   return <div className='nav'>
