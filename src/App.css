@@ -15,7 +15,12 @@ p{
   width: 90%;
   margin: 0 auto;
 }
-
-.App{
-  
+.portaCard{
+  width: 80%;
+  margin: auto;
+  display: grid!important;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1%;
+  grid-template-rows: auto;
+  row-gap: 2%;
 }
