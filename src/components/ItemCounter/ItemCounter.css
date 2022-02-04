@@ -1,0 +1,55 @@
+.itemCounter{
+    align-self: flex-end;
+
+}
+.card__counter{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.card__counter p{    
+    width: 50px;
+    border-radius: 3px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    margin: 0;
+}
+.card__counter button{
+    font-weight: 600;    
+    width: 25px;
+    height: 25px;
+    position: relative;
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    color:#333333;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.card__counter button i{
+    font-size: 14px;
+    position: absolute;
+}
+.card__counter button:hover{
+    background: #ffffff;
+}
+/**/
+.card__buy{
+    display: flex;
+    color: #ffffff;
+    background: rgb(7, 173, 7);
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border:0;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+.card__buy:hover{
+   background: rgb(119, 241, 119); 
+}

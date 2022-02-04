@@ -1,0 +1,39 @@
+.Carousel{
+    width: 95%;
+    margin: 0 auto;
+    padding-bottom: 0;
+}
+.carr_item{
+    background: red;
+    border: solid 1px black;
+    width: auto;
+    height: 250px;
+}
+/**/
+.slick-list{
+    min-height: auto!important;
+}
+/*tarjeta*/
+.slick-slide{
+    margin: 0 10px;
+}
+.slick-slider{
+    height: 300px!important;
+}
+/*contenedor flechas*/
+.slick-arrow{
+    top:calc(50% - 18px)!important;
+}
+.slick-prev, .slick-next{
+    width: 36px!important;
+    height: 36px!important;
+    display: inline-flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+    z-index: 1!important;
+}
+/*arrows*/
+.slick-prev::before, .slick-next::before{
+    color:green!important;
+    font-size: 36px!important;
+}

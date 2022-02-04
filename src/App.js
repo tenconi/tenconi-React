@@ -1,24 +1,37 @@
 import './App.css';
-import Cards from './components/Cards/Cards';
+import React, {useState} from 'react';
 //componentes
 import { ItemList } from './components/NavBar/ItemListContainer/ItemList';
 import NavBar from './components/NavBar/NavBar.jsx';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+//carousel
+/* import Carousel from './components/Carousel/Carousel.jsx'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css"; */
+//componentes clase 7
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Spinner from './components/Spinner/Spinner.jsx'
 
 function App() {
-
-  const onAdd = []; // Dejo la variable vacía para pasarla como prop, sinó me arroja error (¿?)
+  const [isLoading, setIsLoading] = useState (true)
+  setTimeout(()=>{//lo utilizao para demorar el cambio de valor de mi booleano
+    setIsLoading(false)//aca modifico el valor de mi state
+  }, 2500)
+  //const onAdd = []; // Dejo la variable vacía para pasarla como prop, sinó me arroja error (¿?)
 
   return (    
     <div className="App">
     <ItemList name="Daniel Tenconi"/>{/* paso prop para levantarla desde ItemList*/}
     <NavBar/>
     
+    {isLoading ? <Spinner className="Spinner"/> : <ItemDetailContainer/>} 
+    
     
     <div>
+    {/*
+    // Lo dejo para dejar constancia ya que tengo pensado implementarlo de alguna manera 
+    <Carousel/>
     <ItemListContainer/>
-
-      {/* 
+       
       <Cards stock={3} initial="0" onAdd={onAdd} name="Zapas Adidas" cardImg="https://contents.mediadecathlon.com/p1959434/k$670da77ff8a3240facacc0392bd93684/sq/8659260.jpg?format=auto&f=800x0"/>
 
       <Cards stock={4} initial="0" onAdd={onAdd} name="Zapas Dos" cardImg="https://e00-telva.uecdn.es/assets/multimedia/imagenes/2021/03/19/16161931772406.jpg"/>
