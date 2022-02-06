@@ -35,9 +35,6 @@ ul{
 ul li{
     padding: 10px;
     position: relative;
-    
-}
-ul li a{
     font-size: 12px;
     text-transform: uppercase;
     color:#e6e6e6;
@@ -45,8 +42,10 @@ ul li a{
     text-align: center;
     width: 100%;
     height: 100%;
-    display: block;       
+    display: block;  
+    
 }
+
 
 ul li ul{
     display: flex;
@@ -59,12 +58,12 @@ ul li:hover > ul{
     display: block;
     
 }
-ul li:hover > a{
+ul li:hover{
     color:#61dafb;
     text-shadow: 0 0 10px #ffffff;
     
 }
-.acces li a{
+.acces li{
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 1.5px;

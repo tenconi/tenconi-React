@@ -1,19 +1,21 @@
 import React from 'react';
 import './NavBar.css'
 import Logo from '../../img/thunder.svg'
+import {Link} from 'react-router-dom'
 
 const NavBar = () => {
   return <div className='nav'>
       <div className='container'>
-        <h1><img src={Logo} alt="thunder sport" className='logo'/></h1>
+      
+        <h1><Link to="/"><img src={Logo} alt="thunder sport" className='logo'/></Link></h1>        
 
         <ul>
-            <li><a href="">Niños</a></li>
-            <li><a href="">Mujeres</a></li>
-            <li><a href="">Hombres</a></li>
-            <li><a href="">Deportes</a></li>
-            <li><a href="">Marcas</a></li>
-            <li><a href="">Oulets</a></li>
+            <li>Niños</li>
+            <li>Mujeres</li>
+            <li>Hombres</li>
+            <li>Deportes</li>
+            <li>Marcas</li>
+            <li>Oulets</li>
         </ul>
       </div>
 
