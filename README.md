@@ -1,3 +1,18 @@
+Curso: React JS - Coder House
+Alumno: Daniel Tenconi
+
+Hola, buenas tardes.
+Hago entrega de la primer pre-entrega del trabajo.
+En principio el rubro de la app mutó entre una consultora de trabajo, por la variedad de rubros, como por ej: electricista automotor, electricista hogar. A medida pasaron las clase opte por simplificarlo a un local de venta de ropa y calzado deportivo.
+
+Para esta ultimo commit modifiqué la barra de navegación y agrgué un input a modo de buscador (pensando a futuro).
+
+Cualquier consulta me encuentro a su disposición.
+Saludos y mmuchas gracias.
+
+Tenconi Daniel
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
