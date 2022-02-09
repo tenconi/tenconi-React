@@ -1,22 +1,40 @@
 import React from 'react';
 import './NavBar.css'
 import Logo from '../../img/thunder.svg'
+import { ItemList } from './ItemListContainer/ItemList.jsx';
 import {Link} from 'react-router-dom'
 
 const NavBar = () => {
   return <div className='nav'>
       <div className='container'>
       
-        <h1><Link to="/"><img src={Logo} alt="thunder sport" className='logo'/></Link></h1>        
+        <h1><Link to="/"><img src={Logo} alt="thunder sport" className='logo'/></Link></h1> 
 
-        <ul>
-            <li>Niños</li>
-            <li>Mujeres</li>
-            <li>Hombres</li>
-            <li>Deportes</li>
-            <li>Marcas</li>
-            <li>Oulets</li>
-        </ul>
+        <div className="container__mid">
+          <div className="searcher-group">
+            <i className="icon-magnifier"></i>
+            <input type="search" placeholder="buscar" className='searcher'/>
+          </div>
+
+          <ul className='Navigation'>
+              <li><Link to="/calzado" className="linkNav">Calzado</Link></li>
+              <li><Link to="/indumentaria" className="linkNav">Indumentaria</Link></li>
+              <li><Link to="/marcas" className="linkNav">Marcas</Link></li>
+              <li><Link to="/outlet" className="linkNav">Outlet</Link></li>
+              <li className="linkNav">
+                Categorías
+                <ul>
+                  <li><Link to={`/category/:status.Alive`}  className="linkNav">Vivo</Link></li>
+                  <li><Link to={`/category/:status.Deceased`}  className="linkNav">Muerto</Link></li>
+                  <li><Link to={`/category/:status.Unknow`} className="linkNav">Desconocido</Link></li>
+                </ul>
+              </li>
+          </ul>
+        </div>
+        
+        <ItemList name="Daniel Tenconi"/>
+
+
       </div>
 
   </div>;

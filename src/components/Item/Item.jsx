@@ -14,7 +14,7 @@ function Item({data}) {
     <Card className="imgCard">
       <CardMedia
         component="img"
-        image={data.image}
+        image={data.img}
         alt="character"
         className="imgCardMedia"
       />

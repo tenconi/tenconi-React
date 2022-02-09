@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react';
 //import axios from 'axios'
 import ItemDetail from '../ItemDetail/ItemDetail.jsx'
-import {Link} from 'react-router-dom'
-
 
 const ItemDetailContainer=()=> {
     const [items, setItems] = useState([])
@@ -17,12 +15,9 @@ const ItemDetailContainer=()=> {
 
     return <div className='itemcard__cont'>
         
-        {items.map((items) =>
-            <div key={items.char_id}>
-                <Link to={`./ItemDetailed/${items.char_id}`} className='Linked'> 
-                {/* aqui Genero dinamico ':id' para el Link */}
-                    <ItemDetail items={items}/>
-                </Link>
+        {items.map((items, idx) =>
+            <div key={idx + 1}>
+                <ItemDetail items={items}/>
             </div>
         )}
         

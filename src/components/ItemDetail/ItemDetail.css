@@ -2,23 +2,26 @@
     width:80%;
     margin:50px auto;
     display:grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    column-gap: 3%;
-    row-gap: 4%;
+    column-gap: 30px;
+    row-gap: 50px;
 }
 .itemCard{
     max-width: 250px;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 3px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.25);
     background: linear-gradient(180deg,rgb(200, 230, 250), #ffffff);
-    display: grid;
+    display: flex;
+    flex-direction: column;
     padding-bottom: 15px;
     transition: all 0.12s ease-in-out;
     -webkit-transition: all 0.12s ease-in-out;
     -moz-transition: all 0.12s ease-in-out;
     -o-transition: all 0.12s ease-in-out;
+    overflow: hidden;
+    position: relative;
 }
 .itemCard:hover{
     transform: translateY(-5px);
@@ -27,33 +30,52 @@
     -moz-transition: all 0.12s ease-in-out;
     -o-transition: all 0.12s ease-in-out;
 }
+.itemCard__detail--status{
+    position: absolute;
+    z-index: 1;
+    color:#ffffff;
+    background:grey;
+    margin-top: 10px;
+    padding:3px 10px;
+    font-size: 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.25);
+}
 .itemCard__img{
     width: 100%;
-    height: 200px;
+    height: 250px;
     position: relative;
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;    
 }
 .itemCard__img > img{
-    position: absolute;
-    height: 90%;
-    width: auto;    
+    position: absolute; 
+    width: 100%;
 }
 .itemCard__detail{
-    padding: 10px 10px 20px;
-    height: 100%;
+    padding: 15px 20px 20px;
 }
 .itemCard__detail--tit{
     color:#353535;
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+    padding:0
 }
 .itemCard__detail--descr{
+    color:#666;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: center;
+    margin: 0 0 10px 0;
+    padding:0;
+}
+.itemCard__detail--ocup{
     color:#333333;
     font-size: 14px;
-    margin: 0;
+    line-height: 1;
 }
 .itemCard__detail--price{
     color:green;

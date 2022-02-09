@@ -20,7 +20,7 @@
 }
 .item__img{
     background: linear-gradient(180deg,rgb(200, 230, 250), #ffffff);
-    height: 300px;
+    height: 350px;
     width: 100%;
     border-radius: 3px;
     position: relative;
@@ -28,9 +28,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
    
 }
 .item__img > img{
     position: absolute;
-    width: 80%;
+    width: 100%;
 }

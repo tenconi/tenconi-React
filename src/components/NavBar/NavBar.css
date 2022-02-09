@@ -1,19 +1,24 @@
 .nav{
     width: 100%;
-    height: 70px;
-    background: linear-gradient(/*#606060,*/ #454545, #111111);;
+    height: 100px;
+    /* background: linear-gradient(#454545, #111111); */
+    background: linear-gradient(105deg,#454545,60%, #4cabfb);
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     top:0;
     padding:0;
-    position: relative;
+    position: relative;    
 }
 .container{
     width: 90%;
     height: 100%;
     margin:0 auto;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
+}
+.container__mid{
+    display: flex;
+    flex-direction: column;
 }
 h1{
     margin: 0;
@@ -23,16 +28,37 @@ h1{
 }
 h1 .logo{
     margin: 0;
-    height: 100%;
-   
+    height: 100%;   
 }
 ul{
     display: flex;
     list-style: none;
-    list-style: none;
-    margin-left: 100px; 
+    list-style: none;  
+    margin-top: 10px;     
 }
 ul li{
+    position: relative;
+}
+ul li ul{
+    display: none;  
+    top:8px;
+    transition: 0.15s;
+}
+ul li:hover > ul{
+    position:absolute;
+    display: flex; 
+    flex-direction: column;    
+    background-color: rgba(69, 69, 69,0.75);
+    padding:5px 5px 10px;
+    transition: 0.15s;
+    border-radius: 0 0 0 10px;
+    z-index: 2;
+     
+}
+ul li ul li{
+    text-decoration: none;
+}
+/* ul li{
     padding: 10px;
     position: relative;
     font-size: 12px;
@@ -42,27 +68,50 @@ ul li{
     text-align: center;
     width: 100%;
     height: 100%;
-    display: block;  
-    
-}
-
-
-ul li ul{
+    display: block;    
+} */
+.Navigation{
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    display: none;
-    padding:5px
+    justify-content: space-between;
+    align-items: center;
 }
-ul li:hover > ul{
-    display: block;
-    
+.linkNav{
+    color:#ffffff;
+    text-decoration: none;
+    font-size: 12px;
 }
-ul li:hover{
+.linkNav:hover{
     color:#61dafb;
-    text-shadow: 0 0 10px #ffffff;
-    
+    text-shadow: 0 0 10px #ffffff;    
 }
+.container__mid ul :not(:last-child){
+    margin-right: 15px;
+}
+.searcher-group{
+    display: inline-flex;
+    align-items: center;
+}
+.searcher-group i{
+    position: absolute;
+    z-index: 1;
+    margin-left: 5px;
+    color:grey;
+}
+.searcher{
+    position: relative;
+    height: 35px;
+    width: 250px;
+    padding: 5px 10px 5px 25px;
+    outline:none;
+    border-radius: 3px;
+    border:1px solid transparent;
+}
+.searcher:focus{
+    border:1px solid #61dafb;
+    box-shadow: 0 0 15px rgba(97, 218, 251,0.5);
+}
+
+
 .acces li{
     font-size: 10px;
     text-transform: uppercase;

@@ -10,6 +10,7 @@ const Home=()=> {
   }, 1500)
 
   return <div>
+    
       {isLoading ? <Spinner className="Spinner"/> : <ItemDetailContainer/>} 
       
       
