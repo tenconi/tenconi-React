@@ -1,25 +1,30 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail.jsx'
+import { useParams } from 'react-router-dom'
 
 const CategoryContainer=()=> {
 
     const [estado, setEstado] = useState([])
+    //hacer filter: 
+
+    const {Category} = useParams()
+    console.log(estado)
 
     useEffect(()=>{
-        fetch(`https://breakingbadapi.com/api/characters/${staus.alive}`)
+        fetch('https://breakingbadapi.com/api/characters/')
         .then((Response) => Response.json())
-        .then((json) => setEstado(json))
+        .then((json) => setEstado(json.filter((character)=>character.status === Category)))
     },[])
+
+
 
   return (
     <div>
         {estado.map((status) =>
         <div key={status.char_id}>
-            <Link to={`./ItemDetailed/${items.char_id}`} className='Linked'> 
                 {/* aqui Genero dinamico ':id' para el Link */}
-                    <ItemDetail items={items}/>
-            </Link>
+                    <ItemDetail />
         </div>
         )}
         <ItemDetail/>

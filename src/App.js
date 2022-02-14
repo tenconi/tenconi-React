@@ -14,6 +14,8 @@ import Calzado from './views/Calzado.jsx';
 import Indumentaria from './views/Indumentaria.jsx';
 import Marcas from './views/Marcas.jsx';
 import Outlet from './views/Outlet.jsx';
+import CategoryContainer from './components/CategoryContainer/CategoryContainer.jsx'
+import Cart from './views/Cart.jsx'
 
 
 function App() {
@@ -32,9 +34,10 @@ function App() {
         <Route path="/indumentaria" element={<Indumentaria/>} />
         <Route path="/marcas" element={<Marcas/>} />
         <Route path="/outlet" element={<Outlet/>} />
+        <Route path="/userCart" element={<Cart/>} />
 
         {/* ------  */}
-        <Route path="/category/:status" element/>
+        <Route path="/category/:status" element={<CategoryContainer/>}/>
         
       </Routes>
     </Browser>

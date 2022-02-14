@@ -1,19 +1,36 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer.jsx';
 import Spinner from '../components/Spinner/Spinner.jsx';
+import axios from 'axios';
 
 const Category=()=> {
   
+  const [estado, setEstado] = useState([])
 
-  let status = useParams();
+    const {Category} = useParams()
+    console.log(estado)
 
-  /* const [isLoading, setIsLoading] = useState (true)
-    setTimeout(()=>{
-    setIsLoading(false)
-  }, 1000) */
+    useEffect(()=>{
+        fetch('https://breakingbadapi.com/api/characters/')
+        .then((Response) => Response.json())
+        .then((json) => setEstado(json.filter((character)=>character.status === Category)))
+    },[])
+
+
 
   return <div>
+    
+    {estado.map((status)=>{
+      return(
+        <>
+
+       <ItemDetailContainer/>
+
+        </>
+      )
+    })
+    }
       
   </div>;
 }

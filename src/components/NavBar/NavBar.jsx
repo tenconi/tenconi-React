@@ -4,7 +4,7 @@ import Logo from '../../img/thunder.svg'
 import { ItemList } from './ItemListContainer/ItemList.jsx';
 import {Link} from 'react-router-dom'
 
-const NavBar = () => {
+const NavBar = ({status}) => {
   return <div className='nav'>
       <div className='container'>
       
@@ -24,9 +24,9 @@ const NavBar = () => {
               <li className="linkNav">
                 Categorías
                 <ul>
-                  <li><Link to={`/category/:status.Alive`}  className="linkNav">Vivo</Link></li>
-                  <li><Link to={`/category/:status.Deceased`}  className="linkNav">Muerto</Link></li>
-                  <li><Link to={`/category/:status.Unknow`} className="linkNav">Desconocido</Link></li>
+                  <li><Link to={`/category/Alive`}  className="linkNav">Vivo</Link></li>
+                  <li><Link to={`/category/Deceased`}  className="linkNav">Muerto</Link></li>
+                  <li><Link to={`/category/Unknow`} className="linkNav">Desconocido</Link></li>
                 </ul>
               </li>
           </ul>
