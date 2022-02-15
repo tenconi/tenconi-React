@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 
 
 const ItemDetailContainer=()=> {
-    const [items, setItems] = useState([])
+    const [items, setItems] = useState({})
     
 
     useEffect(()=>{
@@ -20,7 +20,6 @@ const ItemDetailContainer=()=> {
         {items.map((items) =>
             <div key={items.char_id}>
                 <Link to={`./ItemDetailed/${items.char_id}`} className='Linked'> 
-                {/* aqui Genero dinamico ':id' para el Link */}
                     <ItemDetail items={items}/>
                 </Link>
             </div>
