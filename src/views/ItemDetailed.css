@@ -58,3 +58,21 @@
     position: absolute;
     width: 100%;
 }
+/* ------ */
+.statusCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.statusCont > div{
+    width: 80%;
+    margin:50px auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 25px;
+    row-gap:25px;
+    
+}
+.MuiBox-root.css-k008qs{
+    display: flex;
+}

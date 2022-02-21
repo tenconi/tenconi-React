@@ -1,28 +1,9 @@
 import React from 'react';
 import './ItemDetail.css'
-import ItemCounter from '../ItemCounter/ItemCounter.jsx'
-//Links Route-React-Dome
 import {Link} from 'react-router-dom'
 
 
-
 const ItemDetail=({items})=> {
-  //console.log(items.status)
-  
-  /* const estado = document.querySelectorAll('.itemCard__detail--status')
-  const state = {items.status}
-  
-  function estate(){
-    if( state == "Deceased"){
-    estado.style.background = "red"
-    }else if(state == "Alive"){
-      estado.style.background = "green"
-    } else {
-      estado.style.background = "grey"
-    }
-  }
-  estate() */
-
 
   return <div className='itemCard'>
 

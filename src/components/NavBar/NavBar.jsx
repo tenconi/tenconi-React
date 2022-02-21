@@ -24,9 +24,9 @@ const NavBar = ({status}) => {
               <li className="linkNav">
                 Status
                 <ul>
-                  <li><Link to={`/status/Alive`}  className="linkNav">Vivo</Link></li>
-                  <li><Link to={`/status/Deceased`}  className="linkNav">Muerto</Link></li>
-                  <li><Link to={`/status/Unknow`} className="linkNav">Desconocido</Link></li>
+                  <li><Link to={`/status/${'Alive'}`}  className="linkNav" value={'Alive'}>Alive</Link></li>
+                  <li><Link to={`/status/${'Deceased'}`}  className="linkNav" value={'Deceased'}>Deceased</Link></li>
+                  <li><Link to={`/status/${'Presumed dead'}`} className="linkNav" value={'Presumed dead'}>Presumed dead</Link></li>
                 </ul>
               </li>
           </ul>

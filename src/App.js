@@ -9,13 +9,13 @@ import NavBar from './components/NavBar/NavBar.jsx';
 import {BrowserRouter as Browser, Route, Routes} from 'react-router-dom';
 //views - pages
 import Home from './views/Home.jsx'
-import ItemDetail from './views/ItemDetailed.jsx';
+import ItemDetailed from './views/ItemDetailed.jsx';
 import Calzado from './views/Calzado.jsx';
 import Indumentaria from './views/Indumentaria.jsx';
 import Marcas from './views/Marcas.jsx';
 import Outlet from './views/Outlet.jsx';
-import Category from './views/Category.jsx'
 import Cart from './views/Cart.jsx'
+import Status from './views/Status.jsx'
 
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/itemDetailed/:id" element={<ItemDetail/>} />
+        <Route path="/itemDetailed/:id" element={<ItemDetailed/>} />
         {/* es Fundamental hacer mención enla ruta de :id, es lo que nos va a generar el dinamismo */}
         <Route path="/calzado" element={<Calzado/>} />
         <Route path="/indumentaria" element={<Indumentaria/>} />
@@ -37,7 +37,7 @@ function App() {
         <Route path="/userCart" element={<Cart/>} />
 
         {/* ------  */}
-        <Route path="/category/:status" element={<Category/>}/>
+        <Route path="/status/:st" element={<Status/>} />
         
       </Routes>
     </Browser>
