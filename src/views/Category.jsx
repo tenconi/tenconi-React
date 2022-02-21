@@ -1,21 +1,25 @@
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer.jsx';
-import Spinner from '../components/Spinner/Spinner.jsx';
-import axios from 'axios';
 
 const Category=()=> {
   
   const [estado, setEstado] = useState([])
 
-    const {Category} = useParams()
-    console.log(estado)
+    const {status} = useParams()
+    //console.log(estado)
 
-    useEffect(()=>{
+   /*  useEffect(()=>{
         fetch('https://breakingbadapi.com/api/characters/')
         .then((Response) => Response.json())
-        .then((json) => setEstado(json.filter((character)=>character.status === Category)))
-    },[])
+        .then((json) => setEstado(json.filter((item)=>item.status === status)))
+    },[status]) */
+
+    useEffect(() => {
+      fetch('https://breakingbadapi.com/api/characters/')
+        .then((response) => response.json())
+        .then((json) => setEstado(json.filter((item) => item.status === status)))
+    }, [status])
 
 
 

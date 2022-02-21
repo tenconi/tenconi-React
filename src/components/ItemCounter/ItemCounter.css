@@ -37,11 +37,13 @@
     background: #ffffff;
 }
 /**/
-.card__buy{
+.botonera{
+    display: flex;
+}
+.card__buy, .card__fin{
     display: flex;
     color: #ffffff;
-    background: rgb(7, 173, 7);
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
     border:0;
@@ -50,6 +52,19 @@
     margin: 10px auto;
     cursor: pointer;
 }
+.card__buy{
+    background: rgb(7, 173, 7);
+    margin-right: 10px;
+}
+.card__fin{
+    background: rgb(162, 173, 7);
+}
+.finish{
+    text-decoration: none;
+}
 .card__buy:hover{
    background: rgb(119, 241, 119); 
 }
+.card__fin:hover{
+    background: rgb(208, 241, 119); 
+ }

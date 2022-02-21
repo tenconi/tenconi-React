@@ -1,23 +1,39 @@
 import {useState} from 'react';
 import './ItemCounter.css'
+import {Link} from 'react-router-dom'
 
-const ItemCount = (props) => {
-//Levanto las props que pase desde >> App.js >> Cards.jsx >> y lo levanto en este componente "ItemCount.jsx"
+const ItemCount = ({data}) => {
 
   const [initial, setInitial] = useState(0);
-  var stock = 10; // lo genero para esta nueva entrega
-  //console.log(props) 
+  var stock = 10; // lo genero para esta entrega ya que se pasará por prop  
+
+  const [buy, setBuy] = useState([]) // Guardo en un Array ¿?¿?
 
   function onAdd() {
-    //const name = document.querySelector('.card__detail--tit').innerHTML; //lo bajo ya que no trae el dato requerido
-    const name = 'PRODUCTO';
     
+    const name = data.nickname; // Traigo dato del prop
+    const cantidAdd = initial; // Levanto Valor del contador
 
-      if (initial > 0) {
+    // Levanto datos del producto ↓
+    console.log(`Cantidad:  ${cantidAdd} - Precio: $ ${data.char_id} - Producto: ${name} :: TOTAL: $`+ (data.char_id * cantidAdd)) 
+
+    // Lo muestro de Manera MOMENTANEA en un Alert ↓
+       if (initial > 0) {
         alert(`👍 Gracias! compraste ${initial} unidades de ${name}`); // VER arroja 1er resultado
       } else {
         alert(`No compraste nada! 😭`);
       }
+      
+      // si el valor esta en 0 aparece Alert ↓
+      /* {initial || alert(`No compraste nada! 😭`)} */
+
+
+      // Guardo en una nuevo estado ¿¿Cómo??
+
+
+
+      // Reseteo Contador ↓ 
+      setInitial(0) 
   }
 
   const handleIncrement = () => {
@@ -40,7 +56,14 @@ const ItemCount = (props) => {
           <button onClick={handleIncrement}><i className='icon-arrow-up'></i></button>
         </div>
         <br/>
-        <button className='card__buy' onClick={onAdd}> comprar </button>
+        <div className="botonera">
+
+          <button className='card__buy' onClick={onAdd}> comprar </button>
+
+          <Link to="/userCart" className='finish'>
+            <button className='card__fin'> Finalizar </button>
+          </Link>
+        </div>
   </div>;
 };
 

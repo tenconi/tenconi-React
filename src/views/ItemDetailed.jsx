@@ -28,14 +28,16 @@ const ItemDetail=()=> {
           </div>
 
           <div className="item__detail">
-          <h2 className="itemCard__detail--tit">{item.nickname}</h2>
-          <h4 className="itemCard__detail--">{item.name}</h4>
-          <p className="itemCard__detail--descr">{item.birthday}</p>
-          <p className="itemCard__detail--descr">{item.occupation}</p>
-          <p className="itemCard__detail--descr">Status: {item.status}</p>
-          <h4 className="itemCard__detail--price">$ {item.char_id}</h4>
+          <h2 className="itemCard__detail--tit-open">{item.nickname}</h2>
+          <h4 className="itemCard__detail--name-open">{item.name}</h4>
+          <p className="itemCard__detail--extra">{item.birthday}</p>
+          <p className="itemCard__detail--extra">{item.occupation}</p>
+          <p className="itemCard__detail--extra">Status: {item.status}</p>
 
-          <ItemCounter/>
+          <h4 className="itemCard__detail--price"><span>Precio:</span> $ {item.char_id}</h4> 
+
+          <ItemCounter data={item}/>
+          {/* Paso info/props al contador */}
           </div>
           </>
         )

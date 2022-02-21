@@ -22,11 +22,11 @@ const NavBar = ({status}) => {
               <li><Link to="/marcas" className="linkNav">Marcas</Link></li>
               <li><Link to="/outlet" className="linkNav">Outlet</Link></li>
               <li className="linkNav">
-                Categorías
+                Status
                 <ul>
-                  <li><Link to={`/category/Alive`}  className="linkNav">Vivo</Link></li>
-                  <li><Link to={`/category/Deceased`}  className="linkNav">Muerto</Link></li>
-                  <li><Link to={`/category/Unknow`} className="linkNav">Desconocido</Link></li>
+                  <li><Link to={`/status/Alive`}  className="linkNav">Vivo</Link></li>
+                  <li><Link to={`/status/Deceased`}  className="linkNav">Muerto</Link></li>
+                  <li><Link to={`/status/Unknow`} className="linkNav">Desconocido</Link></li>
                 </ul>
               </li>
           </ul>

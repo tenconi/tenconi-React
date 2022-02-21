@@ -14,7 +14,7 @@ import Calzado from './views/Calzado.jsx';
 import Indumentaria from './views/Indumentaria.jsx';
 import Marcas from './views/Marcas.jsx';
 import Outlet from './views/Outlet.jsx';
-import CategoryContainer from './components/CategoryContainer/CategoryContainer.jsx'
+import Category from './views/Category.jsx'
 import Cart from './views/Cart.jsx'
 
 
@@ -37,7 +37,7 @@ function App() {
         <Route path="/userCart" element={<Cart/>} />
 
         {/* ------  */}
-        <Route path="/category/:status" element={<CategoryContainer/>}/>
+        <Route path="/category/:status" element={<Category/>}/>
         
       </Routes>
     </Browser>

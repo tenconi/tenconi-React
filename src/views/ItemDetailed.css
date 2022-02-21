@@ -9,12 +9,35 @@
 .item__cont .itemCard__detail--price{
     margin:40px 0 25px
 }
+.item__cont .itemCard__detail--price > span{
+    font-weight: 400;
+}
+.itemCard__detail--tit-open{
+    color:#353535;
+    font-size: 22px;
+    margin: 0;
+    padding:0;
+}
+.itemCard__detail--name-open{
+    color:#666;
+    font-weight: 400;
+    font-size: 26px;
+    margin: 0px 0px 15px;
+    margin: 0 0 10px 0;
+    padding:0;
+
+}
+.itemCard__detail--extra{
+    text-align: left;
+    font-size: 14px;
+}
 
 .item__detail{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+
 .item__detail > .itemCounter{
     align-self: flex-start;
 }

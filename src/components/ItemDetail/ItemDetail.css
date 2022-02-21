@@ -55,6 +55,7 @@
 }
 .itemCard__detail{
     padding: 15px 20px 20px;
+    
 }
 .itemCard__detail--tit{
     color:#353535;
@@ -65,17 +66,19 @@
 }
 .itemCard__detail--descr{
     color:#666;
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 16px;
     margin: 10px 0;
     text-align: center;
     margin: 0 0 10px 0;
     padding:0;
+    
 }
 .itemCard__detail--ocup{
     color:#333333;
     font-size: 14px;
     line-height: 1;
+    text-align: center;
 }
 .itemCard__detail--price{
     color:green;
