@@ -21,9 +21,10 @@
     -o-transition: all 0.12s ease-in-out;
     overflow: hidden;
     position: relative;
+    border:1px solid transparent;
 }
 .itemCard:hover{
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     transition: all 0.12s ease-in-out;
     -webkit-transition: all 0.12s ease-in-out;
     -moz-transition: all 0.12s ease-in-out;

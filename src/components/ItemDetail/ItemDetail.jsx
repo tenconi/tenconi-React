@@ -6,7 +6,7 @@ const ItemDetail=({items})=> {
 
   return <div className='itemCard'>
     
-    {(items.off === true) ? <Link to={`./Status/${items.off}`}><div className='itemCard__detail--status'>Oferta</div></Link> : null}
+    {(items.off === true) ? <Link to={`./ofertas`}><div className='itemCard__detail--status'>Oferta</div></Link> : null}
       
       <img src={items.img} alt="producto" className="itemCard__img"/>
       

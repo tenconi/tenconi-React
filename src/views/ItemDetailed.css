@@ -43,7 +43,7 @@
 }
 .item__img{
     background: linear-gradient(180deg,rgb(200, 230, 250), #ffffff);
-    height: 350px;
+    height: auto;
     width: 100%;
     border-radius: 3px;
     position: relative;

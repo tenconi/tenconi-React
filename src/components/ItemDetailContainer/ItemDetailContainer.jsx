@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail.jsx'
 import {Link} from 'react-router-dom'
 //firebase
-import {db} from '../../FireBase/FireConfig.js'
-import { collection, query, where, getDocs } from "firebase/firestore";
+import {db} from '../../FireBase/FireConfig'
+import { collection, query, getDocs } from "firebase/firestore";
 
 
 const ItemDetailContainer=()=> {
@@ -29,9 +29,9 @@ const ItemDetailContainer=()=> {
     return <div className='itemcard__cont'>
         
         {items.map((items) =>
-            <div key={items.char_id}>
+            <div key={items.id}>
                 <Link to={`./ItemDetailed/${items.id}`} className='Linked'> 
-                    <ItemDetail items={items}/>
+                    <ItemDetail items={items} />
                 </Link>
             </div>
         )}

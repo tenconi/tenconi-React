@@ -9,7 +9,7 @@ import ItemDetailed from './views/ItemDetailed.jsx';
 import Calzado from './views/Calzado.jsx';
 import Indumentaria from './views/Indumentaria.jsx';
 import Marcas from './views/Marcas.jsx';
-import Outlet from './views/Outlet.jsx';
+import Ofertas from './views/Ofertas.jsx';
 import Cart from './views/Cart.jsx'
 import Status from './views/Status.jsx'
 // context
@@ -29,11 +29,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/itemDetailed/:id" element={<ItemDetailed/>} />
-        
+
         <Route path="/calzado" element={<Calzado/>} />
         <Route path="/indumentaria" element={<Indumentaria/>} />
         <Route path="/marcas" element={<Marcas/>} />
-        <Route path="/outlet" element={<Outlet/>} />
+        <Route path="/ofertas" element={<Ofertas/>} />
         <Route path="/userCart" element={<Cart/>} />
         <Route path="/status/:st" element={<Status/>} />        
       </Routes>

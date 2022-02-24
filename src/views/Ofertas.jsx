@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Outlet =()=> {
+const Ofertas =()=> {
   return <div>
     <div className="item__cont">
-      <h1>OutLet</h1>
+      <h1>Ofertas</h1>
     </div>
   </div>;
 }
 
-export default Outlet;
+export default Ofertas;
