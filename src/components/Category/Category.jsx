@@ -21,7 +21,7 @@ const Category=()=> {
     {estado.map((status)=>{
       return(      
           <>
-            <ItemDetail items={status}/>
+            <ItemDetail items={status} />
           </>
       )
     })

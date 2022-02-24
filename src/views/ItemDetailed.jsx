@@ -1,12 +1,30 @@
-import React from 'react';
-import {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react';
 import { useParams } from 'react-router-dom';/* importo el Hook de Parametros para poder levantar los datos*/
 import axios from 'axios'
 import './ItemDetailed.css'
 import ItemCounter from '../components/ItemCounter/ItemCounter.jsx'
 
+import { CartContext } from '../context/cartContext';
+
+
+
 const ItemDetail=()=> {
   const [coso, setCoso] = useState([])
+
+  const cartContext = useContext(CartContext);
+  const {cart, addItem} = cartContext;
+
+  //console.log(addItem)
+  
+  const onAdd = (cantidad)=> {
+     addItem(coso, cantidad);
+     
+  }
+  //console.log(cart)
+
+  /* ---- */
+  
+  
 
   let id = useParams()
   //console.log(id.id)
@@ -15,7 +33,6 @@ const ItemDetail=()=> {
     axios(`https://breakingbadapi.com/api/characters/${id.id}`).then((res) => setCoso(res.data))
   
   }, [id.id]);
-  
 
 
   return <div>
@@ -36,7 +53,7 @@ const ItemDetail=()=> {
 
           <h4 className="itemCard__detail--price"><span>Precio:</span> $ {item.char_id}</h4> 
 
-          <ItemCounter data={item}/>
+          <ItemCounter data={item} ondAdd={onAdd}/>
           {/* Paso info/props al contador */}
           </div>
           </>
