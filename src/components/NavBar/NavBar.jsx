@@ -21,8 +21,7 @@ const NavBar = ({status}) => {
               <li className="linkNav">Indumentaria
               <ul>
                 <li className="linkNav">camisetas</li>
-                <li className="linkNav">pantalones</li>
-                <li className="linkNav">gorras</li>
+                <li className="linkNav">balones</li>
               </ul>
               
               </li>
