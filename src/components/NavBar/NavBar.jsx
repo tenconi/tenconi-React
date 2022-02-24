@@ -27,7 +27,7 @@ const NavBar = ({status}) => {
               
               </li>
               <li><Link to="/marcas" className="linkNav">Marcas</Link></li>
-              <li><Link to="/outlet" className="linkNav">Ofertas</Link></li>
+              <li><Link to="/ofertas" className="linkNav">Ofertas</Link></li>
               <li className="linkNav">
                 Status
                 <ul>

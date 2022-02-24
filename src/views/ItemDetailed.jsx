@@ -43,8 +43,8 @@ const ItemDetail=()=> {
             <img src={item.img} alt="" className="item__img"/>
 
           <div className="item__detail">
-          <h4 className="itemCard__detail--tit-open">{item.cat}</h4>
-          <h2 className="itemCard__detail--name-open">{item.prod}</h2>
+          <h4 className="itemCard__detail--cat-open">{item.cat}</h4>
+          <h2 className="itemCard__detail--prod-open">{item.prod}</h2>
           <p className="itemCard__detail--extra">{item.det}</p>
 
           <h4 className="itemCard__detail--price"><span>Precio:</span> $ {item.price}</h4> 

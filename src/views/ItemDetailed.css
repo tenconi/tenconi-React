@@ -12,20 +12,20 @@
 .item__cont .itemCard__detail--price > span{
     font-weight: 400;
 }
-.itemCard__detail--tit-open{
-    color:#353535;
-    font-size: 22px;
+.itemCard__detail--cat-open{
+    font-weight: 400;
+    color:#666;
+    font-size: 20px;
     margin: 0;
     padding:0;
 }
-.itemCard__detail--name-open{
-    color:#666;
-    font-weight: 400;
+.itemCard__detail--prod-open{
+    color:#353535;
+    font-weight: 600;
     font-size: 26px;
     margin: 0px 0px 15px;
     margin: 0 0 10px 0;
     padding:0;
-
 }
 .itemCard__detail--extra{
     text-align: left;
