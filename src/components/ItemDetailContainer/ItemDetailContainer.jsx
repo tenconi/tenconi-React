@@ -30,9 +30,9 @@ const ItemDetailContainer=()=> {
         
         {items.map((items) =>
             <div key={items.id}>
-                <Link to={`./ItemDetailed/${items.id}`} className='Linked'> 
+                {/* <Link to={`./ItemDetailed/${items.id}`} className='Linked'> */} 
                     <ItemDetail items={items} />
-                </Link>
+                {/* </Link> */}
             </div>
         )}
         

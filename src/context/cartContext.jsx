@@ -1,16 +1,14 @@
 // 1- importo createContext
 import React, {createContext, useState, useEffect} from 'react';
-import axios from 'axios'
 
 // 2- Creo contexto y lo exporto
 export const CartContext = createContext()
 
 // 3- Creo mi provider
 
-export const CartProvider = ({children}) => {
-    
+export const CartProvider = ({children}) => {    
 
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState([]) // array vacio para ir llenando
 
         // ----- Producto que traigo de una API ---- 
         /* const [productos, setProductos]= useState(
@@ -31,6 +29,7 @@ export const CartProvider = ({children}) => {
         ) 
         */
 
+
     /* ------------------- */
 
         // 5- detallo funciones a pasar → por medio de "value"
@@ -40,15 +39,13 @@ export const CartProvider = ({children}) => {
             const product = {...item, cantidad}
             setCart([...cart, product])
 
-            console.log('PRODUCTO: ' + product)
+            //console.log('PRODUCTO: ' + product)
             console.log('CARRITO: ' + cart)
         }
 
         const removeItem =(itemID)=>{
 
         }
-
-        
 
 
     // 4- devuelvo/retorno valores x medio de children

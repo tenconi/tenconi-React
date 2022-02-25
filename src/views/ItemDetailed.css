@@ -6,9 +6,14 @@
     grid-template-columns: 30% 56%;
     column-gap: 4%;
 }
-
+.itemCard__detail--stock{
+    font-size: 10px;
+    color:#666666;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
 .item__cont .itemCard__detail--price{
-    margin:40px 0 25px
+    margin:25px 0px 10px
 }
 .item__cont .itemCard__detail--price > span{
     font-weight: 400;
@@ -16,8 +21,8 @@
 .itemCard__detail--cat-open{
     font-weight: 400;
     color:#666;
-    font-size: 20px;
-    margin: 0;
+    font-size: 18px;
+    margin: 0px 0 -10px;
     padding:0;
 }
 .itemCard__detail--prod-open{
@@ -32,7 +37,6 @@
     text-align: left;
     font-size: 14px;
 }
-
 .item__detail{
     display: flex;
     flex-direction: column;
