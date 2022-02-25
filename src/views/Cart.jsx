@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Cart =()=> {
-  return <div>
-    <div className="item__cont">
+  return <div className="altura">
+    <div>
       <h1>Carrito</h1>
     </div>
   </div>;

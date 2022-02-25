@@ -11,15 +11,8 @@ p{
   width: 90%;
   margin: 0 auto;
 }
-.portaCard{
-  width: 80%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 1%;
-  grid-template-rows: auto;
-  row-gap: 2%;
-}
+
+
 /*Generales*/
 p, h1,h2,h3,h4,h5,h6, a, ul, ol, span{
   font-family: 'IBM Plex Sans Thai Looped', sans-serif;
@@ -29,8 +22,11 @@ p, h1,h2,h3,h4,h5,h6, a, ul, ol, span{
 /*Spinner*/
 .MuiBox-root{
   justify-content: center;
-  margin-top: 100px;
+  margin: 100px auto;
 }
 .Linked{
   text-decoration: none;
+}
+.altura{  
+  min-height: calc(100vh - 276px);
 }

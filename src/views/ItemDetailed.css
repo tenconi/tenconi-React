@@ -1,7 +1,7 @@
 .item__cont{
     width: 80%;
     margin:50px auto;
-    height: 100px;
+    height: auto;
     display: grid;
     grid-template-columns: 30% 56%;
     column-gap: 4%;

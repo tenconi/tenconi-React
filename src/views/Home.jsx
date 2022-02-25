@@ -9,7 +9,7 @@ const Home=()=> {
     setIsLoading(false)//aca modifico el valor de mi state
   }, 1500)
 
-  return <div>
+  return <div className='altura'>
     
       {isLoading ? <Spinner className="Spinner"/> : <ItemDetailContainer/>} 
       

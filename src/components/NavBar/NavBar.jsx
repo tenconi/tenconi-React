@@ -17,11 +17,11 @@ const NavBar = ({status}) => {
           </div>
 
           <ul className='Navigation'>
-              <li><Link to="/calzado" className="linkNav">Calzado</Link></li>
-              <li className="linkNav">Indumentaria
+              <li className="linkNav">Productos
               <ul>
-                <li className="linkNav">camisetas</li>
-                <li className="linkNav">balones</li>
+                <li className="linkNav"><Link to={`/productos/${'calzado'}`} className="linkNav">Calzado</Link></li>
+                <li className="linkNav"><Link to={`/productos/${'camiseta'}`} className="linkNav">Camisetas</Link></li>
+                <li className="linkNav"><Link to={`/productos/${'balon'}`} className="linkNav">Balones</Link></li>
               </ul>
               
               </li>

@@ -1,6 +1,7 @@
 .itemcard__cont{
     width:80%;
-    margin:50px auto;
+    margin:auto;
+    padding:50px 0;
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
@@ -32,9 +33,7 @@
     border:1px solid #61dafb;
     box-shadow: 0 0 15px rgba(97, 218, 251,0.5);
 }
-
-
-.itemCard__detail--status{
+.itemCard__detail--off{
     position: absolute;
     z-index: 1;
     color:#ffffff;
@@ -45,6 +44,9 @@
     padding:3px 10px;
     font-size: 10px;
     box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+.itemCard__detail--off:hover{
+    opacity: 0.85;
 }
 .itemCard__img{
     width: 100%;

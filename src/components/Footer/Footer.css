@@ -1,0 +1,36 @@
+.foot{
+    height: 150px;
+    width: 100%;
+    background:#2e3138;
+}
+.foot .container{
+    width: 90%;
+    margin: auto;
+}
+.brandFoot{
+    height: 30px;
+}
+.foot__tree{
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+}
+.foot__tree li{
+    color:#ffffff
+}
+.foot__tree li:not(:last-child){
+    margin-right: 10px;
+}
+/* --- */
+.footCopy{
+    padding:5px;
+    background-color: #000000;
+    text-align: center;    
+}
+.footCopy p, .footCopy a{
+    color:#ffffff;
+    font-size: 10px;
+}
+.footCopy a{
+    color:#61dafb;
+}

@@ -31,14 +31,14 @@ const ItemDetail=()=> {
 	}, []);
 
 
-  return <div>
+  return <div className="altura">
     <>
     
       {item.map((item)=>{
         return(
-          <div key={item.id} className="item__cont">
+          <div key={item.id} className="">
             
-            {(item.off === true) ? <div className='itemCard__detail--status'>Oferta</div> : null}
+            {(item.off === true) ? <div className='itemCard__detail--off'>Oferta</div> : null}
 
             <img src={item.img} alt="" className="item__img"/>
 
