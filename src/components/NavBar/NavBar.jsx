@@ -27,14 +27,16 @@ const NavBar = ({status}) => {
               </li>
               <li><Link to="/marcas" className="linkNav">Marcas</Link></li>
               <li><Link to="/ofertas" className="linkNav">Ofertas</Link></li>
-              <li className="linkNav">
+
+              {/* <li className="linkNav">
                 Status
                 <ul>
                   <li><Link to={`/status/${'Alive'}`}  className="linkNav">Alive</Link></li>
                   <li><Link to={`/status/${'Deceased'}`}  className="linkNav">Deceased</Link></li>
                   <li><Link to={`/status/${'Presumed dead'}`} className="linkNav">Presumed dead</Link></li>
                 </ul>
-              </li>
+              </li> */}
+
           </ul>
         </div>
         

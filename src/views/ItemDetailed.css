@@ -6,6 +6,7 @@
     grid-template-columns: 30% 56%;
     column-gap: 4%;
 }
+
 .item__cont .itemCard__detail--price{
     margin:40px 0 25px
 }

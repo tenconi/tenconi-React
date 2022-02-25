@@ -2,7 +2,7 @@ import React from 'react';
 
 const Ofertas =()=> {
   return <div className='altura'>
-    <div className="item__cont">
+    <div className="">
       <h1>Ofertas</h1>
     </div>
   </div>;

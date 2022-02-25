@@ -37,10 +37,12 @@ const ItemDetail=()=> {
       {item.map((item)=>{
         return(
           <div key={item.id} className="item__cont">
-            
-            {(item.off === true) ? <div className='itemCard__detail--off'>Oferta</div> : null}
 
-            <img src={item.img} alt="" className="item__img"/>
+            <div>
+              {(item.off === true) ? <Link to={`/ofertas`}><div className='itemCard__detail--off'>Oferta</div></Link> : null}
+
+              <img src={item.img} alt="" className="item__img"/>
+            </div> 
 
           <div className="item__detail">
           <h4 className="itemCard__detail--cat-open">{item.cat}</h4>
