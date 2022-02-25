@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 //components
 
 
@@ -47,7 +48,9 @@ const Productos = () => {
           {categoria.map((items)=>{
             return(
               <>
-              <ItemDetail items={items}/>
+              <Link to={`../ItemDetailed/${items.id}`} className='Linked'>
+                <ItemDetail items={items}/>
+              </Link>
               </>
             )
           })

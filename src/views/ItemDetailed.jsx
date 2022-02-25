@@ -36,7 +36,7 @@ const ItemDetail=()=> {
     
       {item.map((item)=>{
         return(
-          <div key={item.id} className="">
+          <div key={item.id} className="item__cont">
             
             {(item.off === true) ? <div className='itemCard__detail--off'>Oferta</div> : null}
 
