@@ -2,8 +2,6 @@ import React,{useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 //components
-
-
 import Spinner from '../components/Spinner/Spinner'
 
 //firebase
@@ -12,17 +10,18 @@ import { collection, query, where, getDocs} from "firebase/firestore";
 import ItemDetail from '../components/ItemDetail/ItemDetail';
 
 
-    
-
 
 const Productos = () => {
   const[categoria, setCategoria] = useState([]);
-
-  
+  const[isLoading, setIsLoading] = useState(true)
 
   const {prod} = useParams()
 
   //console.log(prod, categoria)
+
+  setTimeout(()=>{//lo utilizao para demorar el cambio de valor de mi booleano
+    setIsLoading(false)//aca modifico el valor de mi state
+  }, 1000)
 
   useEffect(() => {
 		const getCategory = async () => {
@@ -48,9 +47,11 @@ const Productos = () => {
           {categoria.map((items)=>{
             return(
               <>
-              <Link to={`../ItemDetailed/${items.id}`} className='Linked'>
-                <ItemDetail items={items}/>
-              </Link>
+
+              {isLoading ? <Spinner/> : <Link to={`../ItemDetailed/${items.id}`} className='Linked'>
+                <ItemDetail items={items} />
+              </Link>}
+              
               </>
             )
           })

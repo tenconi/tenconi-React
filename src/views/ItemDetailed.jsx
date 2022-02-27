@@ -15,7 +15,7 @@ import { CartContext } from '../context/cartContext';
 
 const ItemDetail=()=> {
 
-  const info = useContext(CartContext);
+  //const info = useContext(CartContext);
   //console.log('INFO ID: ' + CartContext.id)
 
   /**/
@@ -50,21 +50,20 @@ const ItemDetail=()=> {
             <div>
               {(item.off === true) ? <Link to={`/ofertas`}><div className='itemCard__detail--off'>Oferta</div></Link> : null}
 
+              <Link to=""></Link>
               <img src={item.img} alt="" className="item__img"/>
             </div> 
 
             <div className="item__detail">
-            <h4 className="itemCard__detail--cat-open">{item.cat}</h4>
-            <h2 className="itemCard__detail--prod-open">{item.prod}</h2>
-            <p className="itemCard__detail--extra">{item.det}</p>
-            <p className="itemCard__detail--stock">Stock: {item.stock}</p>
+              <h4 className="itemCard__detail--cat-open">{item.cat}</h4>
+              <h2 className="itemCard__detail--prod-open">{item.prod}</h2>
+              <p className="itemCard__detail--extra">{item.det}</p>
+              <p className="itemCard__detail--stock">Stock: {item.stock}</p>
 
-            <h4 className="itemCard__detail--price"><span>Precio:</span> $ {item.price}</h4> 
-            
+              <h4 className="itemCard__detail--price"><span>Precio:</span> $ {item.price}</h4> 
 
-            <ItemCounter stock={item.stock} item={item} />
-
-          </div>
+              <ItemCounter stock={item.stock} item={item} />
+            </div>
           </div>
         )
       })}     

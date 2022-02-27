@@ -1,5 +1,5 @@
 import {useState, useContext} from 'react';
-import { CartContext, CartProvider } from '../../context/cartContext.jsx';
+import { CartContext } from '../../context/cartContext.jsx';
 import './ItemCounter.css'
 //import {Link} from 'react-router-dom'
 
@@ -10,6 +10,10 @@ const ItemCount = ({item, onAdd}) => {
   //console.log('CART PROVIDER: ' +cartProvider)
   
   const [initial, setInitial] = useState(0);
+  
+  console.log(`initial:  ${initial}`)
+
+  console.log(`:  ${item.stock - initial}`)
 
   //var stock = 10; // lo genero para esta entrega ya que se pasará por prop  
   //const [buy, setBuy] = useState([]) // Guardo en un Array ¿?¿?
@@ -41,6 +45,7 @@ const ItemCount = ({item, onAdd}) => {
   const handleIncrement = () => {
       if ((initial => 0) && (initial < item.stock)){ //modifique props.stock para esta entrega
       setInitial(initial + 1);
+      item.stock( item.stock - 1)
       }         
   }
 
@@ -52,23 +57,21 @@ const ItemCount = ({item, onAdd}) => {
 
   return <div className='itemCounter'>
     
-      <div className='card__counter'> 
+      <div className='card__counter'>
+        <button onClick={handleDecrement}><i className='icon-arrow-down'></i></button>
+        <p>{initial}</p>
+        <button onClick={handleIncrement}><i className='icon-arrow-up'></i></button>
+      </div>
 
-          <button onClick={handleDecrement}><i className='icon-arrow-down'></i></button>
-          <p>{initial}</p>
-          <button onClick={handleIncrement}><i className='icon-arrow-up'></i></button>
+    <br/>
+      
+      <div className="botonera">
+        <button className='card__buy' onClick={()=>{addItem(item, initial)}} initial={initial}> Agregar </button>
 
-        </div>
-
-      <br/>
-
-        <div className="botonera">
-          <button className='card__buy' onClick={()=>{addItem(item, initial)}}> Agregar </button>
-
-          {/* <Link to="/userCart" className='finish'> */}
-            <button className='card__fin'> Finalizar </button>
-          {/* </Link> */}
-        </div>
+        {/* <Link to="/userCart" className='finish'> */}
+          <button className='card__fin'> Finalizar </button>
+        {/* </Link> */}
+      </div>
   </div>;
 };
 
