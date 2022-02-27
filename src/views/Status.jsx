@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Category from '../components/Category/Category';
-import './ItemDetailed.css'
+import './Styles.css'
 import Spinner from '../components/Spinner/Spinner'
 
 const Status = () => {
@@ -14,11 +14,7 @@ const Status = () => {
   return (
     <div>
       <div className='statusCont'>
-
-    {isLoading ? <Spinner className="spin"/> : <Category/>}
-        
-
-        
+        {isLoading ? <Spinner className="spin"/> : <Category/>}
       </div>
 
     </div>

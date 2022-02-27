@@ -1,15 +1,12 @@
 import React, {useState, useEffect, useContext} from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import './ItemDetailed.css'
+import './Styles.css'
 //component
 import ItemCounter from '../components/ItemCounter/ItemCounter.jsx'
 //firebase
 import {db} from './../FireBase/FireConfig.js'
 import { collection, query, where, getDocs, documentId } from "firebase/firestore";
-//context
-import { CartContext } from '../context/cartContext';
-
 
 
 

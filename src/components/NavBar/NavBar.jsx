@@ -17,7 +17,7 @@ const NavBar = ({status}) => {
           </div>
 
           <ul className='Navigation'>
-              <li className="linkNav">Productos
+              <li className="linkNav">Categorías
               <ul>
                 <li className="linkNav"><Link to={`/productos/${'calzado'}`} className="linkNav">Calzado</Link></li>
                 <li className="linkNav"><Link to={`/productos/${'camiseta'}`} className="linkNav">Camisetas</Link></li>
