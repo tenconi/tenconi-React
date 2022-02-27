@@ -1,10 +1,10 @@
 import React, {useContext} from 'react';
 import { CartContext } from '../context/cartContext';
 
-const Cart =({initial})=> {
-const{cart, useCart}= useContext(CartContext)//desestructuro context
+const Cart =(initial)=> {
+const{cart, useCart}= useContext(CartContext)//desestructuro context  
 
-console.log(`cart: ${cart}`)
+console.log(`initial: ${initial}`)
 
   return <div className="altura">
 
@@ -13,13 +13,14 @@ console.log(`cart: ${cart}`)
         <h1>Carrito</h1>
         <div>
         
-          {cart.map((PR)=>{
+          {cart.map((PR, initial)=>{
             
             return(<>
             <div>
 
-              <table border="1">
+              <table border="0" cellSpacing={10}>
                 <thead>
+                  <th>img</th>
                   <th>PRODUCTO</th>
                   <th>CATEGORIAS</th>
                   <th>CANT.</th>
@@ -27,17 +28,18 @@ console.log(`cart: ${cart}`)
                 </thead>
 
                 <tr>
+                  <td><img src={PR.img} /></td>
                   <td><strong>{PR.prod}</strong></td>
                   <td>{PR.cat}</td>
-                  <td>initial: ${PR.initial}</td>
+                  <td>initial: {PR.cantidad}</td>
                   <td>$ {PR.price}</td>
                 </tr>
 
                 <tr>
-                  <td>{PR.prod}</td>
+                  <td>Total:</td>
                   <td></td>
                   <td></td>
-                  <td>$  {PR.price}</td>
+                  <td>$  {PR.price * PR.cantidad}</td>
                 </tr>
                 
               </table>

@@ -10,10 +10,8 @@ const ItemCount = ({item, onAdd}) => {
   //console.log('CART PROVIDER: ' +cartProvider)
   
   const [initial, setInitial] = useState(0);
-  
-  console.log(`initial:  ${initial}`)
 
-  console.log(`:  ${item.stock - initial}`)
+  console.log(` Producto: ${item.prod}--- Initial: ${initial}  --- Stock: ${(item.stock) - initial}`)
 
   //var stock = 10; // lo genero para esta entrega ya que se pasará por prop  
   //const [buy, setBuy] = useState([]) // Guardo en un Array ¿?¿?
@@ -43,9 +41,9 @@ const ItemCount = ({item, onAdd}) => {
   } */
   
   const handleIncrement = () => {
-      if ((initial => 0) && (initial < item.stock)){ //modifique props.stock para esta entrega
-      setInitial(initial + 1);
-      item.stock( item.stock - 1)
+      if ((initial => 0) && (initial < item.stock)){ 
+        setInitial(initial + 1);
+        item.stock( item.stock - 1)
       }         
   }
 
@@ -66,7 +64,7 @@ const ItemCount = ({item, onAdd}) => {
     <br/>
       
       <div className="botonera">
-        <button className='card__buy' onClick={()=>{addItem(item, initial)}} initial={initial}> Agregar </button>
+        <button className='card__buy' onClick={()=>{addItem(item, initial)}}> Agregar </button>
 
         {/* <Link to="/userCart" className='finish'> */}
           <button className='card__fin'> Finalizar </button>
@@ -76,67 +74,3 @@ const ItemCount = ({item, onAdd}) => {
 };
 
 export default ItemCount;
-
-
-/* 
-//PROYECTO WEB
-
-const ItemCount = ({ initial, stock, onAdd }) => {
-  //hook de estado
-  const [qty, setQty] = useState(initial);
-  const [showButton, setshowButton] = useState(false);
-
-  let history = useHistory();
-
-  const addProduct = (num) => {
-    setQty(qty + num);
-  };
-
-  return (
-    <div className="count-container">
-      <div className="count-container__contador">
-        <button
-          className="count-container__button"
-          onClick={() => addProduct(-1)}
-          disabled={qty === initial ? true : null}
-        >
-          -
-        </button>
-
-        <span className="count-container__qty">{qty}</span>
-
-        <button
-          className="count-container__button"
-          onClick={() => addProduct(+1)}
-          disabled={qty === stock ? true : null}
-        >
-          +
-        </button>
-      </div>
-
-      <button
-        className="button-primary"
-        onClick={() => {
-          onAdd(qty);
-          setshowButton(true);
-        }}
-        disabled={stock === 0 ? true : null}
-      >
-        Añadir
-      </button>
-
-      {showButton && history.location.pathname.includes('/detail') && (
-        <button
-          onClick={() => {
-            history.push('/cart');
-          }}
-          className="button-primary button-finalizar-compra"
-        >
-          Finalizar compra
-        </button>
-      )}
-    </div>
-  );
-};
-
-*/

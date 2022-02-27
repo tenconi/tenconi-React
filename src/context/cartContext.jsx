@@ -35,11 +35,11 @@ export const CartProvider = ({children}) => {
         // 5- detallo funciones a pasar → por medio de "value"
 
         const addItem =(item, cantidad)=>{
-            
+                        
             const product = {...item, cantidad}
             setCart([...cart, product])
 
-            //console.log('PRODUCTO: ' + product)
+            console.log('PRODUCTO: ' + product)
             console.log('CARRITO: ' + cart)
         }
 
