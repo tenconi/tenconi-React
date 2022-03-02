@@ -1,0 +1,10 @@
+.positionEmpty{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.positionEmpty > h2{
+    color:#333;
+    font-weight: 400;
+}

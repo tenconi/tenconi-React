@@ -156,3 +156,20 @@
 .cartProduct__close:hover{
     fill:rgba(255, 69, 0,1)
 }
+
+.btn__clear{
+    background:#ff4500;
+    border:0;
+    outline: none;
+    color:#ffffff;
+    padding:10px;
+    border-radius: 5px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+    float: right;
+}
+.btn__clear:hover{
+    opacity: 1;
+    transition: 0.15s ease-in-out;
+}
