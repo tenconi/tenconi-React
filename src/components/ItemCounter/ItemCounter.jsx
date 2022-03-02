@@ -1,7 +1,7 @@
 import {useState, useContext} from 'react';
 import { CartContext } from '../../context/cartContext.jsx';
 import './ItemCounter.css'
-//import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
 const ItemCount = ({item, onAdd}) => {
@@ -64,10 +64,10 @@ const ItemCount = ({item, onAdd}) => {
     <br/>
       
       <div className="botonera">
-        <button className='card__buy' onClick={()=>{addItem(item, initial)}}> Agregar </button>
+        <button className='card__buy' onClick={()=>{addItem(item, initial)}}> Agregar <i className="icon-basket-loaded"></i></button>
 
         {/* <Link to="/userCart" className='finish'> */}
-          <button className='card__fin'> Finalizar </button>
+          {/* <button className='card__fin'><Link to="../userCart">Finalizar</Link> </button> */}
         {/* </Link> */}
       </div>
   </div>;

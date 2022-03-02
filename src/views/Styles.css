@@ -169,7 +169,20 @@
     transition: 0.15s ease-in-out;
     float: right;
 }
-.btn__clear:hover{
+.btn__clear:hover, .btn__confirm:hover{
     opacity: 1;
     transition: 0.15s ease-in-out;
+}
+.btn__confirm{
+    background:#08b808;;
+    border:0;
+    opacity: 0.9;
+    outline: none;
+    color:#ffffff;
+    padding:10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+    float: right;
+    margin-left: 10px;
 }

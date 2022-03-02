@@ -54,7 +54,11 @@
 }
 .card__buy{
     background: rgb(7, 173, 7);
-    margin-right: 10px;
+    padding:10px;
+    border-radius: 5px;
+}
+.card__buy i{
+    margin-left: 10px;
 }
 .card__fin{
     background: rgb(162, 173, 7);

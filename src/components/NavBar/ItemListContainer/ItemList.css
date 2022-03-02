@@ -39,14 +39,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    
+    border-radius: 50%;    
+    position: absolute;
+    top:-12px;
+    right: -12px;
 }
 /* ----- CartWidget ----- */
 p.basketCart{
     display: inline-flex;
     flex-direction: row;
-    margin-left:25px;    
+    margin-left:25px;
+    position: relative;   
 }
 p.basketCart i{
     margin-right: 5px;

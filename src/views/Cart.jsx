@@ -40,8 +40,11 @@ const{cart, useCart, removeItem, clearCart}= useContext(CartContext)
                 </>
               )
             })}
-            <button onClick={()=>{clearCart(cart)}} className="btn__clear">Vaciar Carrito</button>
             <h3>Total: </h3>
+            <button className="btn__confirm">Confirmar Compra</button>
+            <button onClick={()=>{clearCart(cart)}} className="btn__clear">Vaciar Carrito</button>
+            
+            
             </div>}
 
             
