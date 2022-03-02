@@ -4,7 +4,7 @@ import './Styles.css'
 
 
 const Cart =(initial)=> {
-const{cart, useCart, removeItem}= useContext(CartContext)
+const{cart, useCart, removeItem, clearCart}= useContext(CartContext)
 
 //const totales = document.querySelectorAll('.itemCard__detail--price').innerHTML();
 //const granTotal = totales.reduce((acc, el) => acc + el,0)
@@ -12,6 +12,7 @@ const{cart, useCart, removeItem}= useContext(CartContext)
 
   return <div className="altura">
       <div className='contenedor'> 
+
 
             {cart.map((PR, initial)=>{            
               return(
@@ -39,7 +40,7 @@ const{cart, useCart, removeItem}= useContext(CartContext)
                 </>
               )
             })}
-
+              <button onClick={()=>{clearCart(cart)}}>BORRAR CARRo</button>
             <h3>Total: </h3>
 
       </div>

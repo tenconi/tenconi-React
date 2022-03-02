@@ -50,9 +50,13 @@ export const CartProvider = ({children}) => {
             setCart (actualizarCart)
         }
 
+        const clearCart = (cart)=>{
+            return setCart([])
+        }
+
 
     // 4- devuelvo/retorno valores x medio de children
-    return <CartContext.Provider value={{cart, setCart, addItem, removeItem}}>
+    return <CartContext.Provider value={{cart, setCart, addItem, removeItem, clearCart}}>
         {children}
     </CartContext.Provider>
 
