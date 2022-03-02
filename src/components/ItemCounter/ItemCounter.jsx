@@ -11,7 +11,7 @@ const ItemCount = ({item, onAdd}) => {
   
   const [initial, setInitial] = useState(0);
 
-  console.log(` Producto: ${item.prod}--- Initial: ${initial}  --- Stock: ${(item.stock) - initial}`)
+  //console.log(` Producto: ${item.prod}--- Initial: ${initial}  --- Stock: ${(item.stock) - initial}`)
 
   //var stock = 10; // lo genero para esta entrega ya que se pasará por prop  
   //const [buy, setBuy] = useState([]) // Guardo en un Array ¿?¿?
@@ -43,7 +43,7 @@ const ItemCount = ({item, onAdd}) => {
   const handleIncrement = () => {
       if ((initial => 0) && (initial < item.stock)){ 
         setInitial(initial + 1);
-        item.stock( item.stock - 1)
+        /* item.stock( item.stock - 1) */
       }         
   }
 
