@@ -10,30 +10,7 @@ export const CartProvider = ({children}) => {
 
     const [cart, setCart] = useState([]) // array vacio para ir llenando
 
-        // ----- Producto que traigo de una API ---- 
-        /* const [productos, setProductos]= useState(
-            useEffect(()=>{
-                axios('https://breakingbadapi.com/api/characters')
-                .then((res)=>setProductos(res.data))
-
-        },[])) */
-
-        /* 
-        // levanta OK
-        console.log(
-            productos.map((x)=>{
-                return(
-                console.log(x.name)
-                )
-            })
-        ) 
-        */
-
-            
-    /* ------------------- */
-
         // 5- detallo funciones a pasar → por medio de "value"
-
         const addItem =(item, cantidad)=>{
                         
             const product = {...item, cantidad}
@@ -42,7 +19,13 @@ export const CartProvider = ({children}) => {
 
             if(cantidad !== 0){
                 if(compareItem){
-                    compareItem.cantidad += cantidad;
+                    //compareItem.cantidad += cantidad;
+                    const consulta = window.confirm('⛔ ¿Deseas agregar más unidades a este item?')
+                    
+                    if(consulta  === true){
+                        compareItem.cantidad += cantidad;
+                    }
+                    
                 }else{
                     setCart([...cart, product])
                 }
