@@ -29,7 +29,7 @@ export const CartProvider = ({children}) => {
         ) 
         */
 
-
+            
     /* ------------------- */
 
         // 5- detallo funciones a pasar → por medio de "value"
@@ -37,10 +37,24 @@ export const CartProvider = ({children}) => {
         const addItem =(item, cantidad)=>{
                         
             const product = {...item, cantidad}
-            setCart([...cart, product])
+
+            const compareItem = cart.find((prod) => prod.id === item.id)
+
+            if(cantidad !== 0){
+                if(compareItem){
+                    compareItem.cantidad += cantidad;
+                }else{
+                    setCart([...cart, product])
+                }
+            } 
 
             //console.log('PRODUCTO: ' + product)
-            //console.log('CARRITO: ' + cart)
+
+            //console.log('CANTIDAD: ')
+            //console.log(product.cantidad)
+            
+            //console.log('CARRITO: ')
+            //console.log(cart)
         }
 
         const removeItem =(itemID)=>{

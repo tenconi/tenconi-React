@@ -11,6 +11,7 @@ const ItemCount = ({item, onAdd}) => {
   
   const [initial, setInitial] = useState(0);
 
+  
   //console.log(` Producto: ${item.prod}--- Initial: ${initial}  --- Stock: ${(item.stock) - initial}`)
 
   //var stock = 10; // lo genero para esta entrega ya que se pasará por prop  
