@@ -14,7 +14,6 @@ export const CartProvider = ({children}) => {
         const addItem =(item, cantidad)=>{
                         
             const product = {...item, cantidad}
-
             const compareItem = cart.find((prod) => prod.id === item.id)
 
             if(cantidad !== 0){
@@ -30,14 +29,6 @@ export const CartProvider = ({children}) => {
                     setCart([...cart, product])
                 }
             } 
-
-            //console.log('PRODUCTO: ' + product)
-
-            //console.log('CANTIDAD: ')
-            //console.log(product.cantidad)
-            
-            //console.log('CARRITO: ')
-            //console.log(cart)
         }
 
         const removeItem =(itemID)=>{
@@ -50,6 +41,7 @@ export const CartProvider = ({children}) => {
         const clearCart = (cart)=>{
             return setCart([])
         }
+        
 
 
     // 4- devuelvo/retorno valores x medio de children

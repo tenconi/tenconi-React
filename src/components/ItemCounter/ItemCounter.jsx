@@ -67,9 +67,9 @@ const ItemCount = ({item, onAdd}) => {
       <div className="botonera">
         <button className='card__buy' onClick={()=>{addItem(item, initial)}}> Agregar <i className="icon-basket-loaded"></i></button>
 
-        {/* <Link to="/userCart" className='finish'> */}
-          {/* <button className='card__fin'><Link to="../userCart">Finalizar</Link> </button> */}
-        {/* </Link> */}
+        
+         <button className='card__fin'><Link to="../userCart" className='card__fin--link'>Finalizar</Link></button> 
+         
       </div>
   </div>;
 };

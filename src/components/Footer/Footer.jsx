@@ -21,7 +21,7 @@ const Footer = () => {
       </div>
 
       <div className='footCopy'>
-        <p>Trabajo realizado para CoderHouse - Comisión 24915 - Autor: Daniel Tenconi | <a href="https://www.tenco.com.ar/" target="_blank">tenco</a> </p>
+        <p>Trabajo realizado para CoderHouse - Comisión 24915 - Autor: Daniel Tenconi</p>
       </div>
     </div>
   )

@@ -2,16 +2,22 @@ import React, {useContext} from 'react';
 import { CartContext } from '../context/cartContext';
 import EmptyCart from '../components/EmptyCart/EmptyCart.jsx';
 import './Styles.css'
-
+import { Link } from 'react-router-dom';
 
 const Cart =(initial)=> {
 const{cart, useCart, removeItem, clearCart}= useContext(CartContext)
 
+/* suma total */
+let totalTotal= 0;
+cart.forEach(e => totalTotal += (e.price * e.cantidad));
+console.log(totalTotal)
+
+
 
   return <div className="altura">
-      <div className='contenedor'> 
+      <div className='contenedor mar__bot'> 
 
-      {cart.length === 0 ? <EmptyCart/> : <div>
+        {cart.length === 0 ? <EmptyCart/> : <div>
             {cart.map((PR, initial)=>{            
               return(
                   <div className="cartProduct" key={cart.id}>                
@@ -35,13 +41,19 @@ const{cart, useCart, removeItem, clearCart}= useContext(CartContext)
                     </div>
               )
             })}
-            <h3>Total: </h3>
-            <button className="btn__confirm">Confirmar Compra</button>
+
+            <h2 className='cart__total'>Valor total: $ {totalTotal}</h2>
+
+            <button className="btn__confirm">
+              <Link to="/confirm" className='link__confirm' totalTotal={totalTotal}>
+                Confirmar Compra
+              </Link>
+              
+              </button>
             <button onClick={()=>{clearCart(cart)}} className="btn__clear">Vaciar Carrito</button>
             
             
             </div>}
-
             
 
       </div>

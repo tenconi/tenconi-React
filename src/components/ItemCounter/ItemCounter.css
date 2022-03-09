@@ -42,6 +42,7 @@
 }
 .card__buy, .card__fin{
     display: flex;
+    align-items: center;
     color: #ffffff;
     font-size: 12px;
     letter-spacing: 1px;
@@ -56,19 +57,21 @@
     background: rgb(7, 173, 7);
     padding:10px;
     border-radius: 5px;
+    opacity: 0.8;
 }
 .card__buy i{
     margin-left: 10px;
 }
 .card__fin{
-    background: rgb(162, 173, 7);
+    background: #ffbb00;
+    margin-left: 10px;
+    opacity: 0.5;
 }
-.finish{
+.card__fin--link{
     text-decoration: none;
+    color:#ffffff;
 }
-.card__buy:hover{
-   background: rgb(119, 241, 119); 
+
+.card__buy:hover,.card__fin:hover{
+   opacity: 1;
 }
-.card__fin:hover{
-    background: rgb(208, 241, 119); 
- }

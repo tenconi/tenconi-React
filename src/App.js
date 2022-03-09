@@ -11,7 +11,7 @@ import Marcas from './views/Marcas.jsx';
 import Ofertas from './views/Ofertas.jsx';
 import Cart from './views/Cart.jsx'
 import Productos from './views/Productos.jsx';
-//import Status from './views/Status.jsx'
+import Confirm from './views/Confirm.jsx';
 
 // context
 import {CartProvider} from './context/cartContext.jsx'
@@ -30,15 +30,14 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/itemDetailed/:id" element={<ItemDetailed/>} />   
-             
+        <Route path="/itemDetailed/:id" element={<ItemDetailed/>} />             
         <Route path="/productos/:prod" element={<Productos/>} />   
 
         <Route path="/marcas" element={<Marcas/>} />
         <Route path="/ofertas" element={<Ofertas/>} />
         <Route path="/userCart" element={<Cart/>} />
 
-        {/* <Route path="/status/:st" element={<Status/>} /> */}        
+        <Route path="/confirm" element={<Confirm/>} />       
       </Routes>
       
       <Footer/>

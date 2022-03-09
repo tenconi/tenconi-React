@@ -86,6 +86,9 @@
 .MuiBox-root.css-k008qs{
     display: flex;
 }
+.mar__bot{
+    margin-bottom: 100px;
+}
 /* ----- */
 .cartProduct{
     display: flex;
@@ -144,8 +147,6 @@
 .cartProduct__close{
     height: 24px;
     width: 24px;
-    /* border: 2px solid rgb(250, 24, 24);
-    background: rgba(255,255,255,0.5); */
     border-radius: 15px;
     position: absolute;
     top:3px;
@@ -156,33 +157,40 @@
 .cartProduct__close:hover{
     fill:rgba(255, 69, 0,1)
 }
-
-.btn__clear{
-    background:#ff4500;
+.btn__clear, .btn__confirm{
     border:0;
     outline: none;
     color:#ffffff;
     padding:10px;
-    border-radius: 5px;
-    opacity: 0.5;
+    border-radius: 5px;    
     cursor: pointer;
     transition: 0.15s ease-in-out;
     float: right;
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+.btn__clear{
+    background:#ff4500;
+    opacity: 0.5;
+}
+.btn__confirm{
+    background:#08b808;
+    margin-left: 10px;
+    opacity: 0.85;
 }
 .btn__clear:hover, .btn__confirm:hover{
     opacity: 1;
     transition: 0.15s ease-in-out;
 }
-.btn__confirm{
-    background:#08b808;;
-    border:0;
-    opacity: 0.9;
-    outline: none;
+.btn__confirm .link__confirm{
     color:#ffffff;
-    padding:10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.15s ease-in-out;
-    float: right;
-    margin-left: 10px;
+    text-decoration: none;
+    display: inline-flex;
+}
+/* ----- */
+.cart__total{
+    text-align: right;
+    margin: 20px 15px 20px 0;
+    color:#353535;
 }
