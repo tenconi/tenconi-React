@@ -10,10 +10,15 @@ function CartWidget() {
   const cartContext = useContext(CartContext);
   const {cart} = cartContext;
 
+  console.log(cart.cantidad)
+  let canTotal = 0;
+  cart.forEach(e => canTotal +=  0 + e.cantidad ) // VER 
+  
+  console.log(canTotal)
 
   return <div>
     <Link to="/userCart" className="userCart">
-      <p className="basketCart"><i className={cart.length ? "icon-basket-loaded" : "icon-basket"}></i>{cart.length ? <span>{cart.length}</span> :null } </p>
+      <p className="basketCart"><i className={cart.length ? "icon-basket-loaded" : "icon-basket"}></i>{cart.length ? <span>{/* {cart.length} */}{canTotal}</span> :null } </p>
     </Link>
   </div>;
   

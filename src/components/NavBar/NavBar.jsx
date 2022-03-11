@@ -17,6 +17,9 @@ const NavBar = ({status}) => {
           </div>
 
           <ul className='Navigation'>
+
+            <li><Link to="/" className="linkNav">Home</Link></li>
+            
               <li className="linkNav">Categorías
               <ul>
                 <li className="linkNav"><Link to={`/productos/${'calzado'}`} className="linkNav">Calzado</Link></li>
@@ -25,7 +28,7 @@ const NavBar = ({status}) => {
               </ul>
               
               </li>
-              <li><Link to="/marcas" className="linkNav">Marcas</Link></li>
+              {/* <li><Link to="/marcas" className="linkNav">Marcas</Link></li> */}
               <li><Link to="/ofertas" className="linkNav">Ofertas</Link></li>
 
               {/* <li className="linkNav">

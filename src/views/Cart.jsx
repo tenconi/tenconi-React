@@ -14,8 +14,8 @@ console.log(totalTotal)
 
 
 
-  return <div className="altura">
-      <div className='contenedor mar__bot'> 
+  return <div className="altura mar__bot">
+      <div className='contenedor'> 
 
         {cart.length === 0 ? <EmptyCart/> : <div>
             {cart.map((PR, initial)=>{            

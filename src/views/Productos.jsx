@@ -3,11 +3,11 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 //components
 import Spinner from '../components/Spinner/Spinner'
+import ItemDetail from '../components/ItemDetail/ItemDetail';
 
 //firebase
 import {db} from '../FireBase/FireConfig.js'
 import { collection, query, where, getDocs} from "firebase/firestore";
-import ItemDetail from '../components/ItemDetail/ItemDetail';
 
 
 
