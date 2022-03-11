@@ -194,3 +194,12 @@
     margin: 20px 15px 20px 0;
     color:#353535;
 }
+/* ----- */
+.error__flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.error__img{
+    height: 300px;
+}

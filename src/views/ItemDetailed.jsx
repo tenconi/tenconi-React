@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './Styles.css'
 //component
 import ItemCounter from '../components/ItemCounter/ItemCounter.jsx'
+import giphy from '../img/giphythunder.gif'
 //firebase
 import {db} from './../FireBase/FireConfig.js'
 import { collection, query, where, getDocs, documentId } from "firebase/firestore";
@@ -11,15 +12,14 @@ import { collection, query, where, getDocs, documentId } from "firebase/firestor
 
 
 const ItemDetail=()=> {
+  
+  const [wait, setWait] = useState(true)
+  setTimeout(()=>{
+    setWait(false)
+  }, 1100)
 
-  //const info = useContext(CartContext);
-  //console.log('INFO ID: ' + CartContext.id)
-
-  /**/
   const [item, setItem] = useState([])
-
   const {id} = useParams() //desestructuro
-  //console.log(item)
 
   useEffect(() => {
 		const getProd = async () => {
@@ -34,7 +34,7 @@ const ItemDetail=()=> {
 			setItem(docs)      
 		};
 		getProd();
-	}, []);
+	}, [item]);
 
 
   return <div className="altura">
@@ -47,8 +47,7 @@ const ItemDetail=()=> {
             <div>
               {(item.off === true) ? <Link to={`/ofertas`}><div className='itemCard__detail--off'>Oferta</div></Link> : null}
 
-              <Link to=""></Link>
-              <img src={item.img} alt="" className="item__img"/>
+              <img src={wait ? giphy : item.img} alt={item.prod} className="item__img"/>
             </div> 
 
             <div className="item__detail">

@@ -7,14 +7,15 @@ import Footer from './components/Footer/Footer';
 import {BrowserRouter as Browser, Route, Routes} from 'react-router-dom';
 import Home from './views/Home.jsx'
 import ItemDetailed from './views/ItemDetailed.jsx';
-import Marcas from './views/Marcas.jsx';
 import Ofertas from './views/Ofertas.jsx';
 import Cart from './views/Cart.jsx'
 import Productos from './views/Productos.jsx';
 import Confirm from './views/Confirm.jsx';
+import Error from './views/Error.jsx';
 
 // context
 import {CartProvider} from './context/cartContext.jsx'
+
 
 
 function App() {
@@ -29,11 +30,12 @@ function App() {
       </div>
 
       <Routes>
+        <Route path="*" element={<Error/>} />
+
         <Route path="/" element={<Home/>} />
         <Route path="/itemDetailed/:id" element={<ItemDetailed/>} />             
-        <Route path="/productos/:prod" element={<Productos/>} />   
-
-        <Route path="/marcas" element={<Marcas/>} />
+        <Route path="/productos/:prod" element={<Productos/>} /> 
+        
         <Route path="/ofertas" element={<Ofertas/>} />
         <Route path="/userCart" element={<Cart/>} />
 
