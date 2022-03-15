@@ -34,7 +34,7 @@ const ItemDetail=()=> {
 			setItem(docs)      
 		};
 		getProd();
-	}, [item]);
+	}, []);
 
 
   return <div className="altura">

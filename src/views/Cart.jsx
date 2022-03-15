@@ -8,10 +8,9 @@ const Cart =(initial)=> {
 const{cart, useCart, removeItem, clearCart}= useContext(CartContext)
 
 /* suma total */
-let totalTotal= 0;
+let totalTotal = 0;
 cart.forEach(e => totalTotal += (e.price * e.cantidad));
-console.log(totalTotal)
-
+//console.log(totalTotal)
 
 
   return <div className="altura mar__bot">
@@ -45,7 +44,7 @@ console.log(totalTotal)
             <h2 className='cart__total'>Valor total: $ {totalTotal}</h2>
 
             <button className="btn__confirm">
-              <Link to="/confirm" className='link__confirm' totalTotal={totalTotal}>
+              <Link to="/confirm" className='link__confirm' >
                 Confirmar Compra
               </Link>
               
