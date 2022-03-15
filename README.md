@@ -7,7 +7,7 @@ Hago entrega del e-commerce realziado en la cursada de React Js en la camada 249
 
 • Para la realización de este he decidido realizar un e-commerce de venta de calzado, vestimenta e insumos deportivos "Thunder".
 
-	
+![img](https://github.com/tenconi/tenconi-React/blob/master/markdown/ecommerce.gif)
  
 
 • La navegación en la app, se realiza a través del nav y a traves de cada card, donde podremos acceder a la la seccción de Categorías y asus respectivas sub-secciones, se puede acceder también a los articulos que se encuentran en oferta, como así también al cart.
