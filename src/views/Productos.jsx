@@ -30,11 +30,9 @@ const Productos = () => {
 
           {categoria.map((items)=>{
             return(
-              <>
-              <Link to={`../ItemDetailed/${items.id}`} className='Linked'>
-                <ItemDetail items={items} />
-              </Link>              
-              </>
+              <div key={items.id}>
+                  <ItemDetail items={items}/>
+              </div>
             )
           })
           }

@@ -27,7 +27,7 @@ const Ofertas =()=> {
 
       {offer.map((items)=>{
         return(
-          <ItemDetail items={items}/>
+          <ItemDetail items={items} key={items.id}/>
         )
       })}
 

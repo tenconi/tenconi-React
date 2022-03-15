@@ -21,6 +21,7 @@ const ItemDetail=()=> {
   const {id} = useParams() //desestructuro
 
   useEffect(() => {
+    let unmounted = false;
 		const getProd = async () => {
 			const q = query(collection(db, 'sport') , where(documentId(), "==", id) );
 			const docs = [];
@@ -28,7 +29,8 @@ const ItemDetail=()=> {
 			querySnapshot.forEach((doc) => {
 				docs.push({ ...doc.data(), id: doc.id });
 			});     
-			setItem(docs)      
+      if(!unmounted){
+			setItem(docs)     } 
 		};
 		getProd();
 	}, []);
@@ -55,16 +57,16 @@ const ItemDetail=()=> {
               <p className="itemCard__detail--extra">{item.det}</p>
               <p className="itemCard__detail--stock">Stock: {item.stock}</p>
 
-              <h4 className="itemCard__detail--price"><span>Precio:</span> $ {item.price}</h4> 
+              <h4 className="itemCard__detail--price"><span>Precio:</span> $ {item.price}</h4>               
 
               <ItemCounter stock={item.stock} item={item} />
-
             </div>
           </div>
         )
-      })}     
+      })}
 
       </>    
+      
 
   </div>;
 }

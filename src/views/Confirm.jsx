@@ -1,6 +1,5 @@
 import React, {useState, useContext} from 'react';
 import { CartContext } from '../context/cartContext';
-//import Cart from './Cart';
 import BuyConfirm from '../components/BuyConfirm/BuyConfirm.jsx'
 import './Styles.css'
 // imagenes tarjeta
@@ -54,7 +53,7 @@ const Confirm = () => {
 
         <ul className='ticketDetail'>
           {cart.map((x)=>{return(
-            <li>
+            <li key={x.id}>
               <p>{x.prod}</p>
               <p>{x.cantidad} x {x.price}</p>
             </li>
@@ -77,7 +76,7 @@ const Confirm = () => {
           <input type="text" name="form__nya" placeholder='nombre y apellido' value={values.form__nya} onChange={onChange}/>
 
           <div className='formDouble'>
-            <input type="month" name="form__exp" placeholder='Fecha de Expiracion' defaultValue="2022-07" pattern='[0-9]{4}-[0-9]{2}'value={values.form__exp} onChange={onChange}/>
+            <input type="month" name="form__exp" placeholder='Fecha de Expiracion' pattern='[0-9]{4}-[0-9]{2}'value={values.form__exp} onChange={onChange}/>
 
             <input type="number" name="form__seg" placeholder='Codigo de Seguridad' value={values.form__seg} onChange={onChange}/>
           </div>
