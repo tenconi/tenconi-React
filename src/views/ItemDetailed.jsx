@@ -10,7 +10,6 @@ import {db} from './../FireBase/FireConfig.js'
 import { collection, query, where, getDocs, documentId } from "firebase/firestore";
 
 
-
 const ItemDetail=()=> {
   
   const [wait, setWait] = useState(true)
@@ -26,10 +25,8 @@ const ItemDetail=()=> {
 			const q = query(collection(db, 'sport') , where(documentId(), "==", id) );
 			const docs = [];
 			const querySnapshot = await getDocs(q);
-      //console.log('DATA:', querySnapshot.docs);
 			querySnapshot.forEach((doc) => {
-        //console.log('DATA:', doc.data(), 'ID:', doc.id);
-				docs.push({ ...doc.data(), id: doc.id });//empujo data e id al array docs
+				docs.push({ ...doc.data(), id: doc.id });
 			});     
 			setItem(docs)      
 		};
@@ -40,6 +37,8 @@ const ItemDetail=()=> {
   return <div className="altura">
     <>
     
+      <p className='back'><Link to="../" className='backLink'><i className='icon-control-rewind'></i> Volver</Link></p>
+      
       {item.map((item)=>{
         return(
           <div key={item.id} className="item__cont">
@@ -59,13 +58,13 @@ const ItemDetail=()=> {
               <h4 className="itemCard__detail--price"><span>Precio:</span> $ {item.price}</h4> 
 
               <ItemCounter stock={item.stock} item={item} />
+
             </div>
           </div>
         )
       })}     
 
-      </>
-      
+      </>    
 
   </div>;
 }

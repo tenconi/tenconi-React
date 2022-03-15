@@ -16,16 +16,13 @@ const Productos = () => {
 			const q = query(collection(db, 'sport') , where('cat', "==", prod) );
 			const docs = [];
 			const querySnapshot = await getDocs(q);
-      //console.log('DATA:', querySnapshot.docs);
 			querySnapshot.forEach((doc) => {
-        //console.log('DATA:', doc.data(), 'ID:', doc.id);
-				docs.push({ ...doc.data(), id: doc.id });//empujo data e id al array docs
+				docs.push({ ...doc.data(), id: doc.id });
 			});     
 			setCategoria(docs)      
 		};
 		getCategory();
-	}, [prod]);
-    
+	}, [prod]);    
 
   return (
     <div className='altura'>

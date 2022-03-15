@@ -15,11 +15,16 @@
     flex-direction: row;
     font-size: 12px;
 }
-.foot__tree li{
-    color:#ffffff
+.foot__tree li .foot_link{
+    color:#ffffff;
+    text-decoration: none;
 }
 .foot__tree li:not(:last-child){
     margin-right: 10px;
+}
+.foot__tree li .foot_link:hover{
+    color:#61dafb;
+    text-shadow: 0 0 10px #ffffff;
 }
 /* --- */
 .footCopy{

@@ -2,7 +2,6 @@ import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
 //context
 import { CartContext } from '../../../context/cartContext';
-
  
 
 function CartWidget() {
@@ -10,11 +9,8 @@ function CartWidget() {
   const cartContext = useContext(CartContext);
   const {cart} = cartContext;
 
-  //console.log(cart.cantidad)
   let canTotal = 0;
-  cart.forEach(e => canTotal +=  0 + e.cantidad ) // VER * no actualiza al sumar del mismo
-  
-  //console.log(canTotal)
+  cart.forEach(e => canTotal +=  0 + e.cantidad ) 
 
   return <div>
     <Link to="/userCart" className="userCart">

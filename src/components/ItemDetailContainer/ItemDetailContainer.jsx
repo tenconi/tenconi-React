@@ -15,12 +15,9 @@ const ItemDetailContainer=()=> {
 			const q = query(collection(db, 'sport'));
 			const docs = [];
 			const querySnapshot = await getDocs(q);
-			// console.log('DATA:', querySnapshot);
 			querySnapshot.forEach((doc) => {
-				// console.log('DATA:', doc.data(), 'ID:', doc.id);
 				docs.push({ ...doc.data(), id: doc.id });
 			});
-			// console.log(docs);
 			setItems(docs);
 		};
 		getProds();
@@ -30,9 +27,7 @@ const ItemDetailContainer=()=> {
         
         {items.map((items) =>
             <div key={items.id}>
-                {/* <Link to={`./ItemDetailed/${items.id}`} className='Linked'> */} 
                     <ItemDetail items={items} />
-                {/* </Link> */}
             </div>
         )}
         

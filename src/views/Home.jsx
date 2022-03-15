@@ -5,8 +5,8 @@ import Spinner from '../components/Spinner/Spinner.jsx';
 const Home=()=> {
 
   const [isLoading, setIsLoading] = useState (true)
-    setTimeout(()=>{//lo utilizao para demorar el cambio de valor de mi booleano
-    setIsLoading(false)//aca modifico el valor de mi state
+    setTimeout(()=>{
+    setIsLoading(false)
   }, 1000)
 
   return <div className='altura'>

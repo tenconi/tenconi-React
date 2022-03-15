@@ -12,7 +12,6 @@ import Cart from './views/Cart.jsx'
 import Productos from './views/Productos.jsx';
 import Confirm from './views/Confirm.jsx';
 import Error from './views/Error.jsx';
-
 // context
 import {CartProvider} from './context/cartContext.jsx'
 

@@ -1,17 +1,54 @@
 Curso: React JS - Coder House
+Comisión: 24915
 Alumno: Daniel Tenconi
 
-Hola, buenas tardes.
-Hago entrega de la primer pre-entrega del trabajo.
-En principio el rubro de la app mutó entre una consultora de trabajo, por la variedad de rubros, como por ej: electricista automotor, electricista hogar. A medida pasaron las clase opte por simplificarlo a un local de venta de ropa y calzado deportivo.
+Hola, buen día.
+Hago entrega del e-commerce realziado en la cursada de React Js en la camada 24915 de CoderHouse.
 
-Para esta ultimo commit modifiqué la barra de navegación y agrgué un input a modo de buscador (pensando a futuro).
+• Para la realización de este he decidido realizar un e-commerce de venta de calzado, vestimenta e insumos deportivos "Thunder".
 
-Cualquier consulta me encuentro a su disposición.
-Saludos y mmuchas gracias.
+	
+ 
 
-Tenconi Daniel
+• La navegación en la app, se realiza a través del nav y a traves de cada card, donde podremos acceder a la la seccción de Categorías y asus respectivas sub-secciones, se puede acceder también a los articulos que se encuentran en oferta, como así también al cart.
 
+ 
+
+• Con respecto a las tarjeta se puede diferenciar entre los productos que poseen oferta y los que no. 
+Cada producto posee un elemento booleano que nos indica si posee oferta o no.
+
+ 
+
+• Para la obtención de productos, la app realiza una petición a Firebase, donde se encuentran los productos cargados.
+
+ 
+
+• Al ingresar en cada producto ingresaremos al detalle del mismo, donde nos arrojará más información, podremos ver el stock del prodcuto, como así tambien podremos visualizar un contador que nos permitira incrementar y decrementar la cantidad de unidades deseadas, nos permitirá tambien agregar el producto a nuestro carro de compra y finalizar la operación llevandonos a la sección de cart.
+
+ 
+
+• A medida que vamos seleccionando productos, se deplegará una notificación en el icono del cart donde podremos visualizar la cantidad de productos en el mismo.
+
+• En caso de que agreguemos más unidades de un mismo prodcuto, nuestra app nos notificará que este producto se encuentra en nuestro carro y nos consultará si deseamos agregar más productos.
+
+ 
+
+• Una vez en la sección cart, podremos visualizar los productos seleccionados, la cantidad de items y el precio de los mismos.
+
+ 
+
+En esta pantalla podremos eliminar cada Item, vaciar por completo el cart, como así tambien confirmar la compra.
+
+• Una vez confirmemos la compra nos llevará ala pantalla donde donde nos mostrará el detalle de la compra y un formulario donde dejaremos nuestros datos.
+
+ 
+
+• Al confirmar o efectivizar nuestra compra se creará un archivo en nuestra base de datos, en firebase, con nuestros datos y nos arrojara un numero de comprobante (ID de nuestro nuevo documento) y nos lo notificará a modo de comprobante.
+
+
+# Tenconi Daniel
+
+=======================
 
 # Getting Started with Create React App
 

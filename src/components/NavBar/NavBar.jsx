@@ -17,7 +17,6 @@ const NavBar = ({status}) => {
           </div>
 
           <ul className='Navigation'>
-
             <li><Link to="/" className="linkNav">Home</Link></li>
             
               <li className="linkNav">Categorías
@@ -28,26 +27,12 @@ const NavBar = ({status}) => {
               </ul>
               
               </li>
-              {/* <li><Link to="/marcas" className="linkNav">Marcas</Link></li> */}
               <li><Link to="/ofertas" className="linkNav">Ofertas</Link></li>
-
-              {/* <li className="linkNav">
-                Status
-                <ul>
-                  <li><Link to={`/status/${'Alive'}`}  className="linkNav">Alive</Link></li>
-                  <li><Link to={`/status/${'Deceased'}`}  className="linkNav">Deceased</Link></li>
-                  <li><Link to={`/status/${'Presumed dead'}`} className="linkNav">Presumed dead</Link></li>
-                </ul>
-              </li> */}
-
           </ul>
         </div>
         
         <ItemList name="Daniel Tenconi"/>
-
-
       </div>
-
   </div>;
 };
 
