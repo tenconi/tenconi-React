@@ -4,6 +4,7 @@ Alumno: Daniel Tenconi
 
 Hola, buen día.
 Hago entrega del e-commerce realziado en la cursada de React Js en la camada 24915 de CoderHouse.
+![img](https://github.com/tenconi/tenconi-React/blob/master/markdown/thunderBrand.png)
 
 • Para la realización de este he decidido realizar un e-commerce de venta de calzado, vestimenta e insumos deportivos "Thunder".
 
@@ -12,39 +13,40 @@ Hago entrega del e-commerce realziado en la cursada de React Js en la camada 249
 
 • La navegación en la app, se realiza a través del nav y a traves de cada card, donde podremos acceder a la la seccción de Categorías y asus respectivas sub-secciones, se puede acceder también a los articulos que se encuentran en oferta, como así también al cart.
 
- 
+![img](https://github.com/tenconi/tenconi-React/blob/master/markdown/nav.jpg)
 
 • Con respecto a las tarjeta se puede diferenciar entre los productos que poseen oferta y los que no. 
 Cada producto posee un elemento booleano que nos indica si posee oferta o no.
 
- 
+![img](https://github.com/tenconi/tenconi-React/blob/master/markdown/cards.jpg)
 
 • Para la obtención de productos, la app realiza una petición a Firebase, donde se encuentran los productos cargados.
 
- 
+![img](https://github.com/tenconi/tenconi-React/blob/master/markdown/cart.jpg) 
 
 • Al ingresar en cada producto ingresaremos al detalle del mismo, donde nos arrojará más información, podremos ver el stock del prodcuto, como así tambien podremos visualizar un contador que nos permitira incrementar y decrementar la cantidad de unidades deseadas, nos permitirá tambien agregar el producto a nuestro carro de compra y finalizar la operación llevandonos a la sección de cart.
 
- 
+![img](https://github.com/tenconi/tenconi-React/blob/master/markdown/detailed.jpg)
 
 • A medida que vamos seleccionando productos, se deplegará una notificación en el icono del cart donde podremos visualizar la cantidad de productos en el mismo.
 
 • En caso de que agreguemos más unidades de un mismo prodcuto, nuestra app nos notificará que este producto se encuentra en nuestro carro y nos consultará si deseamos agregar más productos.
 
- 
+![img](https://github.com/tenconi/tenconi-React/blob/master/markdown/ask.jpg) 
 
 • Una vez en la sección cart, podremos visualizar los productos seleccionados, la cantidad de items y el precio de los mismos.
 
- 
+![img](https://github.com/tenconi/tenconi-React/blob/master/markdown/cartScreen.jpg) 
 
 En esta pantalla podremos eliminar cada Item, vaciar por completo el cart, como así tambien confirmar la compra.
 
 • Una vez confirmemos la compra nos llevará ala pantalla donde donde nos mostrará el detalle de la compra y un formulario donde dejaremos nuestros datos.
 
- 
+![img](https://github.com/tenconi/tenconi-React/blob/master/markdown/confirmScreen.jpg) 
 
 • Al confirmar o efectivizar nuestra compra se creará un archivo en nuestra base de datos, en firebase, con nuestros datos y nos arrojara un numero de comprobante (ID de nuestro nuevo documento) y nos lo notificará a modo de comprobante.
 
+![img](https://github.com/tenconi/tenconi-React/blob/master/markdown/env.jpg)
 
 # Tenconi Daniel
 
